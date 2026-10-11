@@ -1,0 +1,54 @@
+{
+  "id": "A05",
+  "skill": "french-company-accounts",
+  "title": "Renault, closing 2025-12-31, comptes consolides",
+  "question": "Lis les derniers comptes publies de Renault (SIREN 441639465) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre.",
+  "inputs": {
+    "siren": "441639465",
+    "social": false,
+    "recorded": "recorded/441639465.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "K",
+    "turnover_eur": 57922000000,
+    "net_result_eur": -10795000000,
+    "net_margin_pct": -18.64,
+    "ratio": {
+      "name": "taux_d_endettement",
+      "value": 320.856
+    },
+    "previous_closings": [
+      {
+        "closing_date": "2023-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 52376000000,
+        "net_result_eur": 0
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 56232000000,
+        "net_result_eur": 891000000
+      }
+    ],
+    "annuaire_finances": {
+      "2025": {
+        "ca": 57922000000,
+        "resultat_net": -10795000000
+      }
+    }
+  },
+  "must_flag": [],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin -10 795 000 000 / 57 922 000 000 = -18.64 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

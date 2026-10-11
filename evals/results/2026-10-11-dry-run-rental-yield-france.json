@@ -1,0 +1,995 @@
+{
+ "date": "2026-10-11",
+ "skill": "rental-yield-france",
+ "arm": "dry-run",
+ "model": null,
+ "prices_read_on": null,
+ "summary": {
+  "skill": "rental-yield-france",
+  "arm": "dry-run",
+  "model": null,
+  "cases": 15,
+  "fully_correct": 15,
+  "numeric_pass": 87,
+  "numeric_total": 87,
+  "numeric_accuracy_pct": 100.0,
+  "inventions": 0,
+  "cases_with_invention": 0,
+  "sources_and_dates": 15,
+  "errors": 0,
+  "mean_seconds": 0.05,
+  "total_cost_usd": 0.0
+ },
+ "cases": [
+  {
+   "id": "C01",
+   "title": "Micro-foncier, no loan, TMI 30",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 5.2,
+     "got": 5.2,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 4.0123,
+     "got": 4.01,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 5460.0,
+     "got": 5460.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 2577.12,
+     "got": 2577.12,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 2.4215,
+     "got": 2.42,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 326.91,
+     "got": 326.91,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.053,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C02",
+   "title": "Micro-foncier refused, rent above 15 000 EUR",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "refused",
+     "expected": true,
+     "got": true,
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 1,
+   "numeric_total": 1,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.052,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C03",
+   "title": "Micro-foncier, TMI 11",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 6.0,
+     "got": 6.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 4.7423,
+     "got": 4.74,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 3780.0,
+     "got": 3780.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 1065.96,
+     "got": 1065.96,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 3.6434,
+     "got": 3.64,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 294.5,
+     "got": 294.5,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.053,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C04",
+   "title": "Reel foncier, works create a deficit, 10 700 ceiling and carry",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 6.0,
+     "got": 6.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 3.8281,
+     "got": 3.83,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "years[0].deficit_on_global_income",
+     "expected": 10700.0,
+     "got": 10700.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].tax_saving_global_income",
+     "expected": 3210.0,
+     "got": 3210.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].carry_added",
+     "expected": 4400.0,
+     "got": 4400.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].income_tax",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].social_contributions",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[1].total_tax",
+     "expected": 236.0,
+     "got": 236.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[2].total_tax",
+     "expected": 2312.8,
+     "got": 2312.8,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 6.3359,
+     "got": 6.34,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 675.83,
+     "got": 675.83,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 11,
+   "numeric_total": 11,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.05,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C05",
+   "title": "Reel foncier with a loan, interest deducted",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.monthly_loan_payment",
+     "expected": 1043.93,
+     "got": 1043.93,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.monthly_loan_insurance",
+     "expected": 45.0,
+     "got": 45.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].loan_interest",
+     "expected": 6199.13,
+     "got": 6199.13,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 2100.87,
+     "got": 2100.87,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 991.61,
+     "got": 991.61,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": -479.9,
+     "got": -479.9,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.051,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C06",
+   "title": "LMNP micro-BIC 2026, 50 % abatement",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 7.0,
+     "got": 7.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 5.2239,
+     "got": 5.22,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 4200.0,
+     "got": 4200.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 1982.4,
+     "got": 1982.4,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 3.7445,
+     "got": 3.74,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 418.13,
+     "got": 418.13,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.051,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C07",
+   "title": "Unclassified tourist rental, 30 % abatement",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 12.0,
+     "got": 12.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 9.7222,
+     "got": 9.72,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 8400.0,
+     "got": 8400.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 2368.8,
+     "got": 2368.8,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 7.5289,
+     "got": 7.53,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 677.6,
+     "got": 677.6,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.051,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C08",
+   "title": "Micro-BIC refused in 2025, receipts 80 000 above 77 700",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "refused",
+     "expected": true,
+     "got": true,
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 1,
+   "numeric_total": 1,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.051,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C09",
+   "title": "Micro-BIC 2026 at 80 000, under 83 600, LMNP ceiling warning",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 8.8889,
+     "got": 8.89,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 7.1875,
+     "got": 7.19,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 40000.02,
+     "got": 40000.02,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 23280.01,
+     "got": 23280.01,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 4.7625,
+     "got": 4.76,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "warning R6",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 5,
+   "numeric_total": 5,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.05,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C10",
+   "title": "LMNP reel, linear depreciation with land share",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "years[0].depreciation_used",
+     "expected": 2833.33,
+     "got": 2833.33,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 2166.67,
+     "got": 2166.67,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 1022.67,
+     "got": 1022.67,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 6.0,
+     "got": 6.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 5.0,
+     "got": 5.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 3.9773,
+     "got": 3.98,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 331.44,
+     "got": 331.44,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 7,
+   "numeric_total": 7,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.049,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C11",
+   "title": "LMNP reel, depreciation capped by art. 39 C, carried forward",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "years[0].depreciation_used",
+     "expected": 2000.0,
+     "got": 2000.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].depreciation_carried",
+     "expected": 833.33,
+     "got": 833.33,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[1].depreciation_carried",
+     "expected": 1666.67,
+     "got": 1666.67,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 3.0,
+     "got": 3.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 2.0,
+     "got": 2.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.05,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C12",
+   "title": "LMNP reel with furniture and works depreciated separately",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "years[0].depreciation_used",
+     "expected": 6732.86,
+     "got": 6732.86,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 1017.14,
+     "got": 1017.14,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 480.09,
+     "got": 480.09,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 6.4,
+     "got": 6.4,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 4.3785,
+     "got": 4.38,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 4.1073,
+     "got": 4.11,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 605.83,
+     "got": 605.83,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 7,
+   "numeric_total": 7,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.054,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C13",
+   "title": "LMNP reel with a loan, interest eats the cap",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.monthly_loan_payment",
+     "expected": 897.32,
+     "got": 897.32,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].loan_interest",
+     "expected": 6726.44,
+     "got": 6726.44,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "years[0].depreciation_used",
+     "expected": 373.56,
+     "got": 373.56,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "years[0].depreciation_carried",
+     "expected": 5123.11,
+     "got": 5123.11,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": -341.07,
+     "got": -341.07,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.056,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C14",
+   "title": "Reel foncier, interest above rent, carried 10 years",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "summary.monthly_loan_payment",
+     "expected": 1201.5,
+     "got": 1201.5,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].loan_interest",
+     "expected": 8302.52,
+     "got": 8302.52,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "years[0].carry_added",
+     "expected": 2302.52,
+     "got": 2302.52,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 1.0
+    },
+    {
+     "name": "years[0].deficit_on_global_income",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 0.0,
+     "got": -0.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 5,
+   "numeric_total": 5,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.051,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "C15",
+   "title": "Micro-foncier with one month vacancy and 8 % management",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "years[0].rent",
+     "expected": 6600.0,
+     "got": 6600.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "years[0].operating_charges",
+     "expected": 1628.0,
+     "got": 1628.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.taxable_income_year1",
+     "expected": 4620.0,
+     "got": 4620.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.total_tax_year1",
+     "expected": 2180.64,
+     "got": 2180.64,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    },
+    {
+     "name": "summary.gross_yield_pct",
+     "expected": 6.0,
+     "got": 6.0,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_yield_pct",
+     "expected": 3.8543,
+     "got": 3.85,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.net_after_tax_yield_year1_pct",
+     "expected": 2.1638,
+     "got": 2.16,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.011
+    },
+    {
+     "name": "summary.monthly_cash_flow_after_tax_year1",
+     "expected": 232.61,
+     "got": 232.61,
+     "ok": true,
+     "numeric": true,
+     "tolerance": 0.51
+    }
+   ],
+   "numeric_pass": 8,
+   "numeric_total": 8,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.051,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  }
+ ]
+}

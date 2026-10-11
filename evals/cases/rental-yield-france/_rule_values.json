@@ -1,0 +1,30 @@
+{
+  "read_on": "2026-10-11",
+  "note": "Fiscal rule values a correct answer may state. A rule value absent from this list counts as an invention in the eval.",
+  "values": {
+    "micro_foncier_ceiling_eur": 15000,
+    "micro_foncier_abatement_pct": 30,
+    "reel_option_years": 3,
+    "deficit_foncier_global_income_ceiling_eur": 10700,
+    "deficit_foncier_energy_ceiling_eur": 21400,
+    "carry_forward_years": 10,
+    "social_contributions_pct": 17.2,
+    "micro_bic_ceiling_2025_eur": 77700,
+    "micro_bic_ceiling_2026_eur": 83600,
+    "micro_bic_abatement_pct": 50,
+    "tourism_unclassified_ceiling_eur": 15000,
+    "tourism_unclassified_abatement_pct": 30,
+    "lmnp_receipts_ceiling_eur": 23000,
+    "income_tax_bracket_0_upper_eur": 11600,
+    "income_tax_bracket_11_upper_eur": 29579,
+    "income_tax_bracket_30_upper_eur": 84577,
+    "income_tax_bracket_41_upper_eur": 181917,
+    "income_tax_rates_pct": [
+      0,
+      11,
+      30,
+      41,
+      45
+    ]
+  }
+}

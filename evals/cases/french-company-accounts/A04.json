@@ -1,0 +1,57 @@
+{
+  "id": "A04",
+  "skill": "french-company-accounts",
+  "title": "Carrefour, closing 2025-12-31, comptes consolides",
+  "question": "Lis les derniers comptes publies de Carrefour (SIREN 652014051) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre. Le resultat net 2025 est-il vraiment nul ?",
+  "inputs": {
+    "siren": "652014051",
+    "social": false,
+    "recorded": "recorded/652014051.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "K",
+    "turnover_eur": 81149000000,
+    "net_result_eur": 0,
+    "net_margin_pct": 0.0,
+    "ratio": {
+      "name": "taux_d_endettement",
+      "value": 149.542
+    },
+    "previous_closings": [
+      {
+        "closing_date": "2023-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 84908000000,
+        "net_result_eur": 0
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "C",
+        "turnover_eur": 0,
+        "net_result_eur": 297000000
+      }
+    ],
+    "annuaire_finances": {
+      "2025": {
+        "ca": 81149000000,
+        "resultat_net": 0
+      }
+    }
+  },
+  "must_flag": [
+    "net result published as 0",
+    "type of accounts differs"
+  ],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 0 / 81 149 000 000 = 0.0 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

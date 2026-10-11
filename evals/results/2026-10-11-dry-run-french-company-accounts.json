@@ -1,0 +1,1341 @@
+{
+ "date": "2026-10-11",
+ "skill": "french-company-accounts",
+ "arm": "dry-run",
+ "model": null,
+ "prices_read_on": null,
+ "summary": {
+  "skill": "french-company-accounts",
+  "arm": "dry-run",
+  "model": null,
+  "cases": 15,
+  "fully_correct": 15,
+  "numeric_pass": 86,
+  "numeric_total": 86,
+  "numeric_accuracy_pct": 100.0,
+  "inventions": 0,
+  "cases_with_invention": 0,
+  "sources_and_dates": 15,
+  "errors": 0,
+  "mean_seconds": 0.08,
+  "total_cost_usd": 0.0
+ },
+ "cases": [
+  {
+   "id": "A01",
+   "title": "Danone, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 27376000000,
+     "got": 27376000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 2100000000,
+     "got": 2100000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 7.67,
+     "got": 7.67,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio autonomie_financiere",
+     "expected": 37.652,
+     "got": 37.65,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 27661000000,
+      "net_result_eur": 0
+     },
+     "got": {
+      "turnover_eur": 27661000000,
+      "net_result_eur": 0
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 27376000000,
+      "net_result_eur": 0
+     },
+     "got": {
+      "turnover_eur": 27376000000,
+      "net_result_eur": 0
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag net result published as 0",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.083,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A02",
+   "title": "L'Oreal, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 44052000000,
+     "got": 44052000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 6133700000,
+     "got": 6133700000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 13.92,
+     "got": 13.92,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio autonomie_financiere",
+     "expected": 56.621,
+     "got": 56.62,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 41182500000,
+      "net_result_eur": 0
+     },
+     "got": {
+      "turnover_eur": 41182500000,
+      "net_result_eur": 0
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 43486800000,
+      "net_result_eur": 0
+     },
+     "got": {
+      "turnover_eur": 43486800000,
+      "net_result_eur": 0
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag net result published as 0",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "flag EBE",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.081,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A03",
+   "title": "Manufacture Francaise des Pneumatiques Michelin, closing 2025-12-31, comptes annuels complets",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "C",
+     "got": "C",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 5386626000,
+     "got": 5386626000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 37010000,
+     "got": 37010000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 0.69,
+     "got": 0.69,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio credit_clients_jours",
+     "expected": 95.134,
+     "got": 95.13,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2022-12-31",
+     "expected": {
+      "turnover_eur": 5513153,
+      "net_result_eur": 36693
+     },
+     "got": {
+      "turnover_eur": 5513153,
+      "net_result_eur": 36693
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 5570764860,
+      "net_result_eur": -10182615
+     },
+     "got": {
+      "turnover_eur": 5570764860,
+      "net_result_eur": -10182615
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag factor",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.086,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A04",
+   "title": "Carrefour, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 81149000000,
+     "got": 81149000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 0,
+     "got": 0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio taux_d_endettement",
+     "expected": 149.542,
+     "got": 149.54,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 84908000000,
+      "net_result_eur": 0
+     },
+     "got": {
+      "turnover_eur": 84908000000,
+      "net_result_eur": 0
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 0,
+      "net_result_eur": 297000000
+     },
+     "got": {
+      "turnover_eur": 0,
+      "net_result_eur": 297000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag net result published as 0",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "flag type of accounts differs",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.083,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A05",
+   "title": "Renault, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 57922000000,
+     "got": 57922000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": -10795000000,
+     "got": -10795000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": -18.64,
+     "got": -18.64,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio taux_d_endettement",
+     "expected": 320.856,
+     "got": 320.86,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 52376000000,
+      "net_result_eur": 0
+     },
+     "got": {
+      "turnover_eur": 52376000000,
+      "net_result_eur": 0
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 56232000000,
+      "net_result_eur": 891000000
+     },
+     "got": {
+      "turnover_eur": 56232000000,
+      "net_result_eur": 891000000
+     },
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.083,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A06",
+   "title": "Orange, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 40396000000,
+     "got": 40396000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 1139000000,
+     "got": 1139000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 2.82,
+     "got": 2.82,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio autonomie_financiere",
+     "expected": 30.865,
+     "got": 30.86,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 44122000000,
+      "net_result_eur": 2892000000
+     },
+     "got": {
+      "turnover_eur": 44122000000,
+      "net_result_eur": 2892000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 40260000000,
+      "net_result_eur": 2902000000
+     },
+     "got": {
+      "turnover_eur": 40260000000,
+      "net_result_eur": 2902000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag EBE",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.084,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A07",
+   "title": "Bouygues, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 56877000000,
+     "got": 56877000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 1272000000,
+     "got": 1272000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 2.24,
+     "got": 2.24,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio autonomie_financiere",
+     "expected": 20.331,
+     "got": 20.33,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 56017000000,
+      "net_result_eur": 1201000000
+     },
+     "got": {
+      "turnover_eur": 56017000000,
+      "net_result_eur": 1201000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 56752000000,
+      "net_result_eur": 1222000000
+     },
+     "got": {
+      "turnover_eur": 56752000000,
+      "net_result_eur": 1222000000
+     },
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.083,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A08",
+   "title": "Vinci, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 75372000000,
+     "got": 75372000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 5275000000,
+     "got": 5275000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 7.0,
+     "got": 7.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio taux_d_endettement",
+     "expected": 111.874,
+     "got": 111.87,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 69619000000,
+      "net_result_eur": 5102000000
+     },
+     "got": {
+      "turnover_eur": 69619000000,
+      "net_result_eur": 5102000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 72459000000,
+      "net_result_eur": 5274000000
+     },
+     "got": {
+      "turnover_eur": 72459000000,
+      "net_result_eur": 5274000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag EBE",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.081,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A09",
+   "title": "Sodexo, closing 2025-08-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-08-31",
+     "got": "2025-08-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 24329000000,
+     "got": 24329000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 1483000000,
+     "got": 1483000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 6.1,
+     "got": 6.1,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio taux_d_endettement",
+     "expected": 107.97,
+     "got": 107.97,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-08-31",
+     "expected": {
+      "turnover_eur": 20263000000,
+      "net_result_eur": 804000000
+     },
+     "got": {
+      "turnover_eur": 20263000000,
+      "net_result_eur": 804000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-08-31",
+     "expected": {
+      "turnover_eur": 23798000000,
+      "net_result_eur": 179000000
+     },
+     "got": {
+      "turnover_eur": 23798000000,
+      "net_result_eur": 179000000
+     },
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.082,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A10",
+   "title": "Legrand, closing 2025-12-31, comptes annuels complets",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "C",
+     "got": "C",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 99505000,
+     "got": 99505000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 873133000,
+     "got": 873133000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 877.48,
+     "got": 877.48,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 75472000,
+      "net_result_eur": 801471000
+     },
+     "got": {
+      "turnover_eur": 75472000,
+      "net_result_eur": 801471000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 102224000,
+      "net_result_eur": 999134000
+     },
+     "got": {
+      "turnover_eur": 102224000,
+      "net_result_eur": 999134000
+     },
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 5,
+   "numeric_total": 5,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.083,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A11",
+   "title": "Societe Bic, closing 2025-12-31, comptes annuels complets",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "C",
+     "got": "C",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 666788000,
+     "got": 666788000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 91842000,
+     "got": 91842000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 13.77,
+     "got": 13.77,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 2263342000,
+      "net_result_eur": 226515000
+     },
+     "got": {
+      "turnover_eur": 2263342000,
+      "net_result_eur": 226515000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 2196635000,
+      "net_result_eur": 212012000
+     },
+     "got": {
+      "turnover_eur": 2196635000,
+      "net_result_eur": 212012000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag type of accounts differs",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 5,
+   "numeric_total": 5,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.084,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A12",
+   "title": "Hermes International, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 16002000000,
+     "got": 16002000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 4560000000,
+     "got": 4560000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 28.5,
+     "got": 28.5,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio autonomie_financiere",
+     "expected": 77.461,
+     "got": 77.46,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 13427000000,
+      "net_result_eur": 4322000000
+     },
+     "got": {
+      "turnover_eur": 13427000000,
+      "net_result_eur": 4322000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 678000000,
+      "net_result_eur": 3998000000
+     },
+     "got": {
+      "turnover_eur": 678000000,
+      "net_result_eur": 3998000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag type of accounts differs",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.083,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A13",
+   "title": "Dassault Systemes, closing 2025-12-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 6235800000,
+     "got": 6235800000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 1187600000,
+     "got": 1187600000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 19.04,
+     "got": 19.04,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "ratio autonomie_financiere",
+     "expected": 58.421,
+     "got": 58.42,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 5951400000,
+      "net_result_eur": 1050200000
+     },
+     "got": {
+      "turnover_eur": 5951400000,
+      "net_result_eur": 1050200000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 6213600000,
+      "net_result_eur": 0
+     },
+     "got": {
+      "turnover_eur": 6213600000,
+      "net_result_eur": 0
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag EBE",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.082,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A14",
+   "title": "Ubisoft Entertainment, closing 2025-03-31, comptes consolides",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-03-31",
+     "got": "2025-03-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "K",
+     "got": "K",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 1899200000,
+     "got": 1899200000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 0,
+     "got": 0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-03-31",
+     "expected": {
+      "turnover_eur": 1814300000,
+      "net_result_eur": -494700000
+     },
+     "got": {
+      "turnover_eur": 1814300000,
+      "net_result_eur": -494700000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-03-31",
+     "expected": {
+      "turnover_eur": 2643600000,
+      "net_result_eur": 583000000
+     },
+     "got": {
+      "turnover_eur": 2643600000,
+      "net_result_eur": 583000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag net result published as 0",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "flag type of accounts differs",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 5,
+   "numeric_total": 5,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.088,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "A15",
+   "title": "TotalEnergies SE, closing 2025-12-31, comptes annuels complets",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "latest_closing_date",
+     "expected": "2025-12-31",
+     "got": "2025-12-31",
+     "ok": true
+    },
+    {
+     "name": "type_bilan",
+     "expected": "C",
+     "got": "C",
+     "ok": true
+    },
+    {
+     "name": "turnover_eur",
+     "expected": 5190000000,
+     "got": 5190000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_result_eur",
+     "expected": 13721000000,
+     "got": 13721000000,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "net_margin_pct",
+     "expected": 264.37,
+     "got": 264.37,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2023-12-31",
+     "expected": {
+      "turnover_eur": 237128000000,
+      "net_result_eur": 21510000000
+     },
+     "got": {
+      "turnover_eur": 237128000000,
+      "net_result_eur": 21510000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "closing 2024-12-31",
+     "expected": {
+      "turnover_eur": 214550000000,
+      "net_result_eur": 16031000000
+     },
+     "got": {
+      "turnover_eur": 214550000000,
+      "net_result_eur": 16031000000
+     },
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "flag type of accounts differs",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 5,
+   "numeric_total": 5,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.083,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  }
+ ]
+}

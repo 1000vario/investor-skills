@@ -1,0 +1,51 @@
+{
+  "id": "C08",
+  "skill": "rental-yield-france",
+  "title": "Micro-BIC refused in 2025, receipts 80 000 above 77 700",
+  "question": "Immeuble meuble 900 000 EUR, frais 60 000 EUR, 6 666,67 EUR de loyers par mois, charges 6 000 EUR, taxe fonciere 5 000 EUR, tranche 41 %, micro-BIC, revenus 2025. Rendement net d'impot ?",
+  "inputs": {
+    "price": 900000,
+    "fees": 60000,
+    "works": 0,
+    "rent_monthly": 6666.67,
+    "charges_annual": 6000,
+    "property_tax": 5000,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "lmnp-micro-bic",
+    "tmi": 0.41,
+    "income_year": 2025,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {},
+  "expect_refusal": {
+    "rule": "R5",
+    "reason": "receipts 80 000 EUR above 77 700 EUR (2025)"
+  },
+  "expect_warning": null,
+  "must_mention": [
+    "77 ?700"
+  ],
+  "hand_computation": "6 666.67 x 12 = 80 000.04 > 77 700 (R5, 2025 ceiling): micro-BIC not open.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

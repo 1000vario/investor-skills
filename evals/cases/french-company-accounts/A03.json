@@ -1,0 +1,56 @@
+{
+  "id": "A03",
+  "skill": "french-company-accounts",
+  "title": "Manufacture Francaise des Pneumatiques Michelin, closing 2025-12-31, comptes annuels complets",
+  "question": "Lis les derniers comptes publies de Manufacture Francaise des Pneumatiques Michelin (SIREN 855200507) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre. Le chiffre d'affaires 2022 semble minuscule : est-ce une chute reelle ?",
+  "inputs": {
+    "siren": "855200507",
+    "social": false,
+    "recorded": "recorded/855200507.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "C",
+    "turnover_eur": 5386626000,
+    "net_result_eur": 37010000,
+    "net_margin_pct": 0.69,
+    "ratio": {
+      "name": "credit_clients_jours",
+      "value": 95.134
+    },
+    "previous_closings": [
+      {
+        "closing_date": "2022-12-31",
+        "type_bilan": "C",
+        "turnover_eur": 5513153,
+        "net_result_eur": 36693
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "C",
+        "turnover_eur": 5570764860,
+        "net_result_eur": -10182615
+      }
+    ],
+    "annuaire_finances": {
+      "2025": {
+        "ca": 5386626000,
+        "resultat_net": 37010000
+      }
+    }
+  },
+  "must_flag": [
+    "factor"
+  ],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 37 010 000 / 5 386 626 000 = 0.69 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

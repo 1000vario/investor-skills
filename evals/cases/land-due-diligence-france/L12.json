@@ -1,0 +1,52 @@
+{
+  "id": "L12",
+  "skill": "land-due-diligence-france",
+  "title": "Grenoble, Seveso site, ground movements, strong clay, commune in a TRI",
+  "question": "Fais la due diligence fonciere de la parcelle 38185000AZ0909 a Grenoble a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, sans prix demande, et chaque fait avec sa source et sa date de consultation.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L12.json",
+    "asking_price": null,
+    "surface": null,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 0,
+      "orange": 3,
+      "info": 2
+    },
+    "flag_codes": [
+      "catnat_orders",
+      "clay_strong",
+      "commune_in_tri",
+      "ground_movements_500m",
+      "seveso_nearby"
+    ],
+    "stats": {
+      "count": 5,
+      "median_eur_m2": 3000,
+      "mean_eur_m2": 3000,
+      "min_eur_m2": 2800,
+      "max_eur_m2": 3200
+    },
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [],
+    "orange_flag_keywords": [
+      "argile|clay",
+      "mouvement|movement",
+      "Seveso"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 180000/(30+30)=3000, 232500/75=3100, 261000/90=2900, 160000/50=3200, 308000/110=2800; sorted 2800 2900 3000 3100 3200; median 3000; mean 15000/5=3000",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

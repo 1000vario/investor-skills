@@ -1,0 +1,1419 @@
+{
+ "date": "2026-10-11",
+ "skill": "land-due-diligence-france",
+ "arm": "dry-run",
+ "model": null,
+ "prices_read_on": null,
+ "summary": {
+  "skill": "land-due-diligence-france",
+  "arm": "dry-run",
+  "model": null,
+  "cases": 15,
+  "fully_correct": 15,
+  "numeric_pass": 82,
+  "numeric_total": 82,
+  "numeric_accuracy_pct": 100.0,
+  "inventions": 0,
+  "cases_with_invention": 0,
+  "sources_and_dates": 15,
+  "errors": 0,
+  "mean_seconds": 0.07,
+  "total_cost_usd": 0.0
+ },
+ "cases": [
+  {
+   "id": "L01",
+   "title": "Rennes, urban zone, asking price at the median",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 0,
+      "orange": 0,
+      "info": 1
+     },
+     "got": {
+      "red": 0,
+      "orange": 0,
+      "info": 1
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "catnat_orders"
+     ],
+     "got": [
+      "catnat_orders"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 5,
+     "got": 5,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 3100,
+     "got": 3100.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 3100,
+     "got": 3100.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2900,
+     "got": 2900.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 3300,
+     "got": 3300.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": 0.0,
+     "got": 0.0,
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.071,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L02",
+   "title": "Nantes, asking price 22 % above the median",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 0,
+      "orange": 1,
+      "info": 0
+     },
+     "got": {
+      "red": 0,
+      "orange": 1,
+      "info": 0
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "asking_above_median"
+     ],
+     "got": [
+      "asking_above_median"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 4,
+     "got": 4,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 4100,
+     "got": 4100.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 4050,
+     "got": 4050.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 3800,
+     "got": 3800.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 4200,
+     "got": 4200.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": 21.95,
+     "got": 21.95,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "orange keyword prix|price|m[ée]dian",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.074,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L03",
+   "title": "Tours, flood zoning within 100 m, DPE E",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+     },
+     "got": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "catnat_orders",
+      "dpe_e",
+      "flood_zone"
+     ],
+     "got": [
+      "catnat_orders",
+      "dpe_e",
+      "flood_zone"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 3,
+     "got": 3,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 2000,
+     "got": 2000.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 2033.33,
+     "got": 2033.33,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 1900,
+     "got": 1900.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 2200,
+     "got": 2200.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword inond|flood",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword DPE|classe E|class E",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.075,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L04",
+   "title": "Angers outskirts, agricultural zone A",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 1,
+      "info": 3
+     },
+     "got": {
+      "red": 1,
+      "orange": 1,
+      "info": 3
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "asking_below_median",
+      "clay_medium",
+      "dpe_none",
+      "few_comparables",
+      "not_constructible"
+     ],
+     "got": [
+      "asking_below_median",
+      "clay_medium",
+      "dpe_none",
+      "few_comparables",
+      "not_constructible"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 2,
+     "got": 2,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 1600,
+     "got": 1600.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 1600,
+     "got": 1600.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 1500,
+     "got": 1500.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 1700,
+     "got": 1700.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": -25.0,
+     "got": -25.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword agricole|agricultural|zone A|constructible",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword comparable",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.074,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L05",
+   "title": "Dijon, natural zone N, underground cavity, parcel sold in 2022",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+     },
+     "got": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "not_constructible",
+      "parcel_sold_before",
+      "underground_cavities_500m"
+     ],
+     "got": [
+      "not_constructible",
+      "parcel_sold_before",
+      "underground_cavities_500m"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 5,
+     "got": 5,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 2500,
+     "got": 2500.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 2540,
+     "got": 2540.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2400,
+     "got": 2400.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 2700,
+     "got": 2700.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword naturelle|natural|zone N|constructible",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword cavit",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.071,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L06",
+   "title": "Lille, latest DPE G with an older E",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 0,
+      "info": 2
+     },
+     "got": {
+      "red": 1,
+      "orange": 0,
+      "info": 2
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "dpe_f_or_g",
+      "dpe_several",
+      "icpe_nearby"
+     ],
+     "got": [
+      "dpe_f_or_g",
+      "dpe_several",
+      "icpe_nearby"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 4,
+     "got": 4,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 3050,
+     "got": 3050.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 3025,
+     "got": 3025.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2800,
+     "got": 2800.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 3200,
+     "got": 3200.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": 1.34,
+     "got": 1.34,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword DPE|classe G|class G",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.073,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L07",
+   "title": "Clermont-Ferrand, DPE F, significant radon potential",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 0,
+      "info": 1
+     },
+     "got": {
+      "red": 1,
+      "orange": 0,
+      "info": 1
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "dpe_f_or_g",
+      "radon_high"
+     ],
+     "got": [
+      "dpe_f_or_g",
+      "radon_high"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 3,
+     "got": 3,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 2200,
+     "got": 2200.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 2200,
+     "got": 2200.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2100,
+     "got": 2100.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 2300,
+     "got": 2300.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword DPE|classe F|class F",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.073,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L08",
+   "title": "Le Mans, no sale within 300 m",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 0,
+      "info": 0
+     },
+     "got": {
+      "red": 1,
+      "orange": 0,
+      "info": 0
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "no_comparable_sale"
+     ],
+     "got": [
+      "no_comparable_sale"
+     ],
+     "ok": true
+    },
+    {
+     "name": "stats null",
+     "expected": null,
+     "got": {},
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword comparable|vente|sale",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 2,
+   "numeric_total": 2,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.069,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L09",
+   "title": "Metz, DVF not covered in Moselle",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 1,
+      "info": 0
+     },
+     "got": {
+      "red": 1,
+      "orange": 1,
+      "info": 0
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "sales_unavailable",
+      "tool_error"
+     ],
+     "got": [
+      "sales_unavailable",
+      "tool_error"
+     ],
+     "ok": true
+    },
+    {
+     "name": "stats null",
+     "expected": null,
+     "got": {},
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword DVF|couvert|covered|Moselle|disponible|available",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword not_covered|couvert|covered|DVF",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 2,
+   "numeric_total": 2,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.071,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L10",
+   "title": "Synthetic rural commune under the RNU, strong clay exposure",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 0,
+      "orange": 2,
+      "info": 1
+     },
+     "got": {
+      "red": 0,
+      "orange": 2,
+      "info": 1
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "clay_strong",
+      "dpe_unavailable",
+      "rnu"
+     ],
+     "got": [
+      "clay_strong",
+      "dpe_unavailable",
+      "rnu"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 3,
+     "got": 3,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 1000,
+     "got": 1000.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 1016.67,
+     "got": 1016.67,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 950,
+     "got": 950.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 1100,
+     "got": 1100.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "orange keyword RNU|document d'urbanisme|planning",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword argile|clay",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.07,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L11",
+   "title": "Synthetic rural commune, carte communale non constructible sector",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+     },
+     "got": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "dpe_none",
+      "few_comparables",
+      "not_constructible"
+     ],
+     "got": [
+      "dpe_none",
+      "few_comparables",
+      "not_constructible"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 2,
+     "got": 2,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 1250,
+     "got": 1250.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 1250,
+     "got": 1250.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 1200,
+     "got": 1200.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 1300,
+     "got": 1300.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "red keyword constructible",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword comparable",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.072,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L12",
+   "title": "Grenoble, Seveso site, ground movements, strong clay, commune in a TRI",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 0,
+      "orange": 3,
+      "info": 2
+     },
+     "got": {
+      "red": 0,
+      "orange": 3,
+      "info": 2
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "catnat_orders",
+      "clay_strong",
+      "commune_in_tri",
+      "ground_movements_500m",
+      "seveso_nearby"
+     ],
+     "got": [
+      "catnat_orders",
+      "clay_strong",
+      "commune_in_tri",
+      "ground_movements_500m",
+      "seveso_nearby"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 5,
+     "got": 5,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 3000,
+     "got": 3000.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 3000,
+     "got": 3000.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2800,
+     "got": 2800.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 3200,
+     "got": 3200.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": null,
+     "got": null,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "orange keyword argile|clay",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword mouvement|movement",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword Seveso",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.073,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L13",
+   "title": "Orleans, zone 1AU to be urbanised, prescriptions",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 0,
+      "orange": 2,
+      "info": 2
+     },
+     "got": {
+      "red": 0,
+      "orange": 2,
+      "info": 2
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "dpe_none",
+      "few_comparables",
+      "prescriptions",
+      "zone_to_be_urbanised"
+     ],
+     "got": [
+      "dpe_none",
+      "few_comparables",
+      "prescriptions",
+      "zone_to_be_urbanised"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 2,
+     "got": 2,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 2400,
+     "got": 2400.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 2400,
+     "got": 2400.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2300,
+     "got": 2300.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 2500,
+     "got": 2500.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": 13.64,
+     "got": 13.64,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "orange keyword AU|urbanis",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword comparable",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.074,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L14",
+   "title": "Reims, one outlier sale, an exchange and a land-only mutation to skip",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 0,
+      "orange": 0,
+      "info": 2
+     },
+     "got": {
+      "red": 0,
+      "orange": 0,
+      "info": 2
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "asking_below_median",
+      "outlier"
+     ],
+     "got": [
+      "asking_below_median",
+      "outlier"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 5,
+     "got": 5,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 2300,
+     "got": 2300.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 3800,
+     "got": 3800.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2100,
+     "got": 2100.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 10000,
+     "got": 10000.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": -18.48,
+     "got": -18.48,
+     "ok": true,
+     "numeric": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.073,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  },
+  {
+   "id": "L15",
+   "title": "Poitiers, four tool envelopes, risks tool failed, flats only, PM1 easement",
+   "arm": "dry-run",
+   "ok": true,
+   "checks": [
+    {
+     "name": "counts",
+     "expected": {
+      "red": 0,
+      "orange": 3,
+      "info": 0
+     },
+     "got": {
+      "red": 0,
+      "orange": 3,
+      "info": 0
+     },
+     "ok": true
+    },
+    {
+     "name": "flag_codes",
+     "expected": [
+      "easement",
+      "risks_unavailable",
+      "tool_error"
+     ],
+     "got": [
+      "easement",
+      "risks_unavailable",
+      "tool_error"
+     ],
+     "ok": true
+    },
+    {
+     "name": "count",
+     "expected": 3,
+     "got": 3,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "median_eur_m2",
+     "expected": 2500,
+     "got": 2500.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "mean_eur_m2",
+     "expected": 2500,
+     "got": 2500.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "min_eur_m2",
+     "expected": 2400,
+     "got": 2400.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "max_eur_m2",
+     "expected": 2600,
+     "got": 2600.0,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "gap_to_median_pct",
+     "expected": 6.67,
+     "got": 6.67,
+     "ok": true,
+     "numeric": true
+    },
+    {
+     "name": "orange keyword risque|risk|G[ée]orisques",
+     "expected": true,
+     "got": true,
+     "ok": true
+    },
+    {
+     "name": "orange keyword servitude|easement|PPR|PM1",
+     "expected": true,
+     "got": true,
+     "ok": true
+    }
+   ],
+   "numeric_pass": 6,
+   "numeric_total": 6,
+   "inventions": [],
+   "must_mention_missing": null,
+   "sources_ok": true,
+   "dates_ok": true,
+   "seconds": 0.072,
+   "cost_usd": 0.0,
+   "usage": null,
+   "error": null
+  }
+ ]
+}

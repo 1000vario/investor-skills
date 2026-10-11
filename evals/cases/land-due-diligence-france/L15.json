@@ -1,0 +1,49 @@
+{
+  "id": "L15",
+  "skill": "land-due-diligence-france",
+  "title": "Poitiers, four tool envelopes, risks tool failed, flats only, PM1 easement",
+  "question": "Fais la due diligence fonciere de la parcelle 86194000DL0580 a Poitiers a partir de la reponse foncier-mcp jointe (quatre reponses d'outils). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 160000 EUR pour 60 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation. Ne retiens que les appartements comme comparables. Les quatre reponses d'outils sont jointes separement.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L15.json",
+    "asking_price": 160000,
+    "surface": 60,
+    "property_type": "Appartement"
+  },
+  "expected": {
+    "counts": {
+      "red": 0,
+      "orange": 3,
+      "info": 0
+    },
+    "flag_codes": [
+      "easement",
+      "risks_unavailable",
+      "tool_error"
+    ],
+    "stats": {
+      "count": 3,
+      "median_eur_m2": 2500,
+      "mean_eur_m2": 2500,
+      "min_eur_m2": 2400,
+      "max_eur_m2": 2600
+    },
+    "gap_to_median_pct": 6.67,
+    "red_flag_keywords": [],
+    "orange_flag_keywords": [
+      "risque|risk|G[ée]orisques",
+      "servitude|easement|PPR|PM1"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "flats only: 150000/60=2500, 108000/45=2400, 182000/70=2600 (two houses skipped); sorted 2400 2500 2600; median 2500; mean 7500/3=2500; asking 160000/60=2666.67 -> gap 2666.67/2500-1=+6.67 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

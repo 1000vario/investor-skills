@@ -1,0 +1,50 @@
+{
+  "id": "L11",
+  "skill": "land-due-diligence-france",
+  "title": "Synthetic rural commune, carte communale non constructible sector",
+  "question": "Fais la due diligence fonciere de la parcelle 99902000ZB0305 a Commune synthetique B a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, sans prix demande, et chaque fait avec sa source et sa date de consultation. Le document est une carte communale : la parcelle est-elle constructible ?",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L11.json",
+    "asking_price": null,
+    "surface": null,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+    },
+    "flag_codes": [
+      "dpe_none",
+      "few_comparables",
+      "not_constructible"
+    ],
+    "stats": {
+      "count": 2,
+      "median_eur_m2": 1250,
+      "mean_eur_m2": 1250,
+      "min_eur_m2": 1200,
+      "max_eur_m2": 1300
+    },
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [
+      "constructible"
+    ],
+    "orange_flag_keywords": [
+      "comparable"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 108000/90=1200, 143000/110=1300; median (1200+1300)/2=1250; mean 1250",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

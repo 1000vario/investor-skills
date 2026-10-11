@@ -1,0 +1,77 @@
+{
+  "id": "C12",
+  "skill": "rental-yield-france",
+  "title": "LMNP reel with furniture and works depreciated separately",
+  "question": "Meuble 150 000 EUR dont 8 000 EUR de mobilier, frais 12 000 EUR, travaux 15 000 EUR, loyer 800 EUR hors charges, charges 900 EUR, taxe fonciere 800 EUR, assurance 150 EUR, tranche 30 %, LMNP au reel. Amortissements, impot, rendement ?",
+  "inputs": {
+    "price": 150000,
+    "fees": 12000,
+    "works": 15000,
+    "rent_monthly": 800,
+    "charges_annual": 900,
+    "property_tax": 800,
+    "insurance_annual": 150,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "lmnp-reel",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 8000,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "years[0].depreciation_used": {
+      "value": 6732.86,
+      "tolerance": 0.51
+    },
+    "summary.taxable_income_year1": {
+      "value": 1017.14,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 480.09,
+      "tolerance": 0.51
+    },
+    "summary.gross_yield_pct": {
+      "value": 6.4,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 4.3785,
+      "tolerance": 0.011
+    },
+    "summary.net_after_tax_yield_year1_pct": {
+      "value": 4.1073,
+      "tolerance": 0.011
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": 605.83,
+      "tolerance": 0.51
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "mobilier|furniture"
+  ],
+  "hand_computation": "building (150 000 + 12 000) x 0.85 / 30 = 4 590; works 15 000 / 15 = 1 000; furniture 8 000 / 7 = 1 142.86; total 6 732.86; taxable 9 600 - 1 850 - 6 732.86 = 1 017.14; tax 47.2 % = 480.09; net 7 750 / 177 000 = 4.3785 %.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

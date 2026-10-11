@@ -1,0 +1,54 @@
+{
+  "id": "A09",
+  "skill": "french-company-accounts",
+  "title": "Sodexo, closing 2025-08-31, comptes consolides",
+  "question": "Lis les derniers comptes publies de Sodexo (SIREN 301940219) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre. L'exercice ne cloture pas au 31 decembre : precise les dates.",
+  "inputs": {
+    "siren": "301940219",
+    "social": false,
+    "recorded": "recorded/301940219.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-08-31",
+    "type_bilan": "K",
+    "turnover_eur": 24329000000,
+    "net_result_eur": 1483000000,
+    "net_margin_pct": 6.1,
+    "ratio": {
+      "name": "taux_d_endettement",
+      "value": 107.97
+    },
+    "previous_closings": [
+      {
+        "closing_date": "2023-08-31",
+        "type_bilan": "K",
+        "turnover_eur": 20263000000,
+        "net_result_eur": 804000000
+      },
+      {
+        "closing_date": "2024-08-31",
+        "type_bilan": "K",
+        "turnover_eur": 23798000000,
+        "net_result_eur": 179000000
+      }
+    ],
+    "annuaire_finances": {
+      "2025": {
+        "ca": 24329000000,
+        "resultat_net": 1483000000
+      }
+    }
+  },
+  "must_flag": [],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 1 483 000 000 / 24 329 000 000 = 6.1 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

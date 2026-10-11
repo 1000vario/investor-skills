@@ -1,0 +1,45 @@
+{
+  "id": "L14",
+  "skill": "land-due-diligence-france",
+  "title": "Reims, one outlier sale, an exchange and a land-only mutation to skip",
+  "question": "Fais la due diligence fonciere de la parcelle 51454000CV0066 a Reims a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 150000 EUR pour 80 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation. Une vente semble aberrante : dis comment tu la traites.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L14.json",
+    "asking_price": 150000,
+    "surface": 80,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 0,
+      "orange": 0,
+      "info": 2
+    },
+    "flag_codes": [
+      "asking_below_median",
+      "outlier"
+    ],
+    "stats": {
+      "count": 5,
+      "median_eur_m2": 2300,
+      "mean_eur_m2": 3800,
+      "min_eur_m2": 2100,
+      "max_eur_m2": 10000
+    },
+    "gap_to_median_pct": -18.48,
+    "red_flag_keywords": [],
+    "orange_flag_keywords": []
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 176000/80=2200, 218500/95=2300, 147000/70=2100, 240000/100=2400, 400000/40=10000 (outlier); exchange and land-only mutations skipped; sorted 2100 2200 2300 2400 10000; median 2300; mean 19000/5=3800; asking 150000/80=1875 -> gap 1875/2300-1=-18.48 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

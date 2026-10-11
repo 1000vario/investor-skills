@@ -1,0 +1,94 @@
+{
+  "id": "C04",
+  "skill": "rental-yield-france",
+  "title": "Reel foncier, works create a deficit, 10 700 ceiling and carry",
+  "question": "Maison 100 000 EUR, frais 8 000 EUR, 20 000 EUR de travaux deductibles, loyer 500 EUR hors charges, charges 500 EUR, taxe fonciere 600 EUR, tranche 30 %, regime reel. Que donne le deficit foncier la premiere annee et les suivantes ?",
+  "inputs": {
+    "price": 100000,
+    "fees": 8000,
+    "works": 20000,
+    "rent_monthly": 500,
+    "charges_annual": 500,
+    "property_tax": 600,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "reel-foncier",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.gross_yield_pct": {
+      "value": 6.0,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 3.8281,
+      "tolerance": 0.011
+    },
+    "years[0].deficit_on_global_income": {
+      "value": 10700.0,
+      "tolerance": 0.51
+    },
+    "years[0].tax_saving_global_income": {
+      "value": 3210.0,
+      "tolerance": 0.51
+    },
+    "years[0].carry_added": {
+      "value": 4400.0,
+      "tolerance": 0.51
+    },
+    "years[0].income_tax": {
+      "value": 0.0,
+      "tolerance": 0.51
+    },
+    "years[0].social_contributions": {
+      "value": 0.0,
+      "tolerance": 0.51
+    },
+    "years[1].total_tax": {
+      "value": 236.0,
+      "tolerance": 0.51
+    },
+    "years[2].total_tax": {
+      "value": 2312.8,
+      "tolerance": 0.51
+    },
+    "summary.net_after_tax_yield_year1_pct": {
+      "value": 6.3359,
+      "tolerance": 0.011
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": 675.83,
+      "tolerance": 0.51
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "10 ?700",
+    "10 ans|dix ans|ten years"
+  ],
+  "hand_computation": "year 1: 6 000 - 1 100 - 20 000 = -15 100; 10 700 on global income (R3), saving 30 % = 3 210; 4 400 carried; year 2: 4 900 - 4 400 = 500 taxable, tax 150 + 86 = 236; year 3: 4 900 taxable, tax 1 470 + 842.80 = 2 312.80; net 4 900 / 128 000 = 3.8281 %; after tax year 1 (4 900 + 3 210) / 128 000 = 6.3359 %.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

@@ -1,0 +1,77 @@
+{
+  "id": "C10",
+  "skill": "rental-yield-france",
+  "title": "LMNP reel, linear depreciation with land share",
+  "question": "Meuble 100 000 EUR sans frais, loyer 500 EUR hors charges, charges 1 000 EUR, pas de taxe fonciere, tranche 30 %, LMNP au reel, amortissement lineaire sur 30 ans avec 15 % de terrain. Impot et rendement net d'impot ?",
+  "inputs": {
+    "price": 100000,
+    "fees": 0,
+    "works": 0,
+    "rent_monthly": 500,
+    "charges_annual": 1000,
+    "property_tax": 0,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "lmnp-reel",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "years[0].depreciation_used": {
+      "value": 2833.33,
+      "tolerance": 0.51
+    },
+    "summary.taxable_income_year1": {
+      "value": 2166.67,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 1022.67,
+      "tolerance": 0.51
+    },
+    "summary.gross_yield_pct": {
+      "value": 6.0,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 5.0,
+      "tolerance": 0.011
+    },
+    "summary.net_after_tax_yield_year1_pct": {
+      "value": 3.9773,
+      "tolerance": 0.011
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": 331.44,
+      "tolerance": 0.51
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "amortissement|depreciation"
+  ],
+  "hand_computation": "depreciation 100 000 x 0.85 / 30 = 2 833.33; taxable 6 000 - 1 000 - 2 833.33 = 2 166.67; tax 47.2 % = 1 022.67; after tax 3 977.33 / 100 000 = 3.9773 %.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

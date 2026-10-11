@@ -1,0 +1,600 @@
+{
+  "envelopes": [
+    {
+      "ok": true,
+      "tool": "get_parcel_sales",
+      "input": {
+        "parcel_id": "86194000DL0580",
+        "fixture": "synthetic"
+      },
+      "data": {
+        "parcel": {
+          "value": {
+            "id": "86194000DL0580",
+            "code_insee": "86194",
+            "com_abs": "000",
+            "section": "DL",
+            "numero": "0580",
+            "contenance_m2": 450,
+            "centroid": [
+              0.3404,
+              46.5802
+            ]
+          },
+          "source": "apicarto_cadastre",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "files": {
+          "value": [
+            "geo-dvf 2021 full.csv.gz",
+            "geo-dvf 2022 full.csv.gz",
+            "geo-dvf 2023 full.csv.gz",
+            "geo-dvf 2024 full.csv.gz",
+            "geo-dvf 2025 full.csv.gz"
+          ],
+          "source": "dvf_geo",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "years": {
+          "value": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"
+          ],
+          "source": "foncier_mcp",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "sales_on_parcel": {
+          "value": [],
+          "source": "dvf_geo",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "sales_on_parcel_count": {
+          "value": 0,
+          "source": "foncier_mcp",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "sales_nearby": {
+          "value": [
+            {
+              "mutation_id": "2024-100001",
+              "date": "2024-03-14",
+              "nature": "Vente",
+              "price_eur": 150000,
+              "address": "3 rue des Lilas",
+              "postcode": "86000",
+              "commune": "Poitiers",
+              "parcels": [
+                "86194000DL0901"
+              ],
+              "buildings": [
+                {
+                  "parcel_id": "86194000DL0901",
+                  "type": "Appartement",
+                  "built_area_m2": 60,
+                  "rooms": 2,
+                  "lots": 0
+                }
+              ],
+              "land": [
+                {
+                  "parcel_id": "86194000DL0901",
+                  "nature": "sols",
+                  "area_m2": 300
+                }
+              ],
+              "lon": 0.3414,
+              "lat": 46.5802,
+              "distance_m": 90
+            },
+            {
+              "mutation_id": "2023-100002",
+              "date": "2023-09-09",
+              "nature": "Vente",
+              "price_eur": 108000,
+              "address": "4 avenue de la Gare",
+              "postcode": "86000",
+              "commune": "Poitiers",
+              "parcels": [
+                "86194000DL0902"
+              ],
+              "buildings": [
+                {
+                  "parcel_id": "86194000DL0902",
+                  "type": "Appartement",
+                  "built_area_m2": 45,
+                  "rooms": 1,
+                  "lots": 0
+                }
+              ],
+              "land": [
+                {
+                  "parcel_id": "86194000DL0902",
+                  "nature": "sols",
+                  "area_m2": 300
+                }
+              ],
+              "lon": 0.3424,
+              "lat": 46.5802,
+              "distance_m": 160
+            },
+            {
+              "mutation_id": "2025-100003",
+              "date": "2025-05-05",
+              "nature": "Vente",
+              "price_eur": 300000,
+              "address": "5 rue du Moulin",
+              "postcode": "86000",
+              "commune": "Poitiers",
+              "parcels": [
+                "86194000DL0903"
+              ],
+              "buildings": [
+                {
+                  "parcel_id": "86194000DL0903",
+                  "type": "Maison",
+                  "built_area_m2": 120,
+                  "rooms": 4,
+                  "lots": 0
+                }
+              ],
+              "land": [
+                {
+                  "parcel_id": "86194000DL0903",
+                  "nature": "sols",
+                  "area_m2": 300
+                }
+              ],
+              "lon": 0.3434,
+              "lat": 46.5802,
+              "distance_m": 230
+            },
+            {
+              "mutation_id": "2022-100004",
+              "date": "2022-04-19",
+              "nature": "Vente",
+              "price_eur": 182000,
+              "address": "6 impasse des Ormes",
+              "postcode": "86000",
+              "commune": "Poitiers",
+              "parcels": [
+                "86194000DL0904"
+              ],
+              "buildings": [
+                {
+                  "parcel_id": "86194000DL0904",
+                  "type": "Appartement",
+                  "built_area_m2": 70,
+                  "rooms": 2,
+                  "lots": 0
+                }
+              ],
+              "land": [
+                {
+                  "parcel_id": "86194000DL0904",
+                  "nature": "sols",
+                  "area_m2": 300
+                }
+              ],
+              "lon": 0.3444,
+              "lat": 46.5802,
+              "distance_m": 300
+            },
+            {
+              "mutation_id": "2024-100005",
+              "date": "2024-12-02",
+              "nature": "Vente",
+              "price_eur": 189000,
+              "address": "7 rue Pasteur",
+              "postcode": "86000",
+              "commune": "Poitiers",
+              "parcels": [
+                "86194000DL0905"
+              ],
+              "buildings": [
+                {
+                  "parcel_id": "86194000DL0905",
+                  "type": "Maison",
+                  "built_area_m2": 90,
+                  "rooms": 3,
+                  "lots": 0
+                }
+              ],
+              "land": [
+                {
+                  "parcel_id": "86194000DL0905",
+                  "nature": "sols",
+                  "area_m2": 300
+                }
+              ],
+              "lon": 0.3454,
+              "lat": 46.5802,
+              "distance_m": 410
+            }
+          ],
+          "source": "dvf_geo",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "sales_nearby_radius_m": {
+          "value": 500,
+          "source": "foncier_mcp",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      },
+      "warnings": [],
+      "errors": [],
+      "sources": {
+        "geoplateforme_geocodage": {
+          "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+          "url": "https://data.geopf.fr/geocodage",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_cadastre": {
+          "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+          "url": "https://apicarto.ign.fr/api/cadastre",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_gpu": {
+          "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+          "url": "https://apicarto.ign.fr/api/gpu",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "dvf_geo": {
+          "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+          "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "ademe_dpe": {
+          "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+          "url": "https://data.ademe.fr/datasets/dpe03existant",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "georisques": {
+          "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+          "url": "https://georisques.gouv.fr/api/v1",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+        },
+        "foncier_mcp": {
+          "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+          "url": "https://github.com/1000vario/foncier-mcp",
+          "licence": "MIT"
+        }
+      },
+      "generated_at": "2026-10-11T14:05:03+00:00",
+      "duration_ms": 900
+    },
+    {
+      "ok": true,
+      "tool": "get_zoning",
+      "input": {
+        "parcel_id": "86194000DL0580",
+        "fixture": "synthetic"
+      },
+      "data": {
+        "parcel": {
+          "value": {
+            "id": "86194000DL0580",
+            "code_insee": "86194",
+            "com_abs": "000",
+            "section": "DL",
+            "numero": "0580",
+            "contenance_m2": 450,
+            "centroid": [
+              0.3404,
+              46.5802
+            ]
+          },
+          "source": "apicarto_cadastre",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "municipality": {
+          "value": {
+            "insee": "86194",
+            "name": "Poitiers",
+            "is_rnu": false,
+            "is_coastline": false,
+            "is_deleted": false
+          },
+          "source": "apicarto_gpu",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "planning_document": {
+          "value": [
+            {
+              "id": "PLU_86194",
+              "type": "PLU",
+              "title": "PLU de Poitiers",
+              "authority_code": "86194",
+              "partition": "DU_86194",
+              "gpu_status": "active",
+              "gpu_published_at": "2024-03-01"
+            }
+          ],
+          "source": "apicarto_gpu",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "zones": {
+          "value": [
+            {
+              "label": "UB",
+              "long_label": "Zone UB",
+              "type": "U",
+              "type_meaning": "urban zone",
+              "document_id": "PLU_86194",
+              "validated_on": "2020-06-15",
+              "approved_on": "2020-06-15",
+              "regulation_file": "PLU_reglement.pdf",
+              "regulation_url": "https://data.geopf.fr/annexes/gpu/documents/PLU/PLU_reglement.pdf",
+              "gpu_status": "active",
+              "gpu_published_at": "2024-03-01"
+            }
+          ],
+          "source": "apicarto_gpu",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "prescriptions": {
+          "value": [],
+          "source": "apicarto_gpu",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "public_utility_easements": {
+          "value": [
+            {
+              "category": "PM1",
+              "name": "Plan de prevention des risques naturels previsibles (inondation)",
+              "footprint_type": "surface",
+              "footprint_id": "PM1_001",
+              "generator_id": "GEN_PM1",
+              "file": "PM1.pdf",
+              "regulation_url": "https://data.geopf.fr/annexes/sup/PM1.pdf",
+              "partition": "DU_SUP",
+              "gpu_published_at": "2023-11-15"
+            }
+          ],
+          "source": "apicarto_gpu",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "lookup_point": {
+          "value": {
+            "lon": 0.3404,
+            "lat": 46.5802
+          },
+          "source": "foncier_mcp",
+          "retrieved_at": null,
+          "reason": null
+        }
+      },
+      "warnings": [],
+      "errors": [],
+      "sources": {
+        "geoplateforme_geocodage": {
+          "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+          "url": "https://data.geopf.fr/geocodage",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_cadastre": {
+          "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+          "url": "https://apicarto.ign.fr/api/cadastre",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_gpu": {
+          "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+          "url": "https://apicarto.ign.fr/api/gpu",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "dvf_geo": {
+          "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+          "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "ademe_dpe": {
+          "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+          "url": "https://data.ademe.fr/datasets/dpe03existant",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "georisques": {
+          "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+          "url": "https://georisques.gouv.fr/api/v1",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+        },
+        "foncier_mcp": {
+          "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+          "url": "https://github.com/1000vario/foncier-mcp",
+          "licence": "MIT"
+        }
+      },
+      "generated_at": "2026-10-11T14:05:03+00:00",
+      "duration_ms": 900
+    },
+    {
+      "ok": true,
+      "tool": "get_energy_diagnostics",
+      "input": {
+        "parcel_id": "86194000DL0580",
+        "fixture": "synthetic"
+      },
+      "data": {
+        "parcel": {
+          "value": {
+            "id": "86194000DL0580",
+            "code_insee": "86194",
+            "com_abs": "000",
+            "section": "DL",
+            "numero": "0580",
+            "contenance_m2": 450,
+            "centroid": [
+              0.3404,
+              46.5802
+            ]
+          },
+          "source": "apicarto_cadastre",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "address": {
+          "value": {
+            "label": "12 Rue des Tilleuls 86000 Poitiers",
+            "ban_id": "86194_0120_00012",
+            "match_type": "housenumber",
+            "distance_m": 9
+          },
+          "source": "geoplateforme_geocodage",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "diagnostics": {
+          "value": [
+            {
+              "issued_on": "2023-07-07",
+              "valid_until": "2033-07-06",
+              "energy_class": "D",
+              "ghg_class": "D",
+              "primary_energy_kwh_m2_year": 220,
+              "ghg_kgco2_m2_year": 22,
+              "building_type": "appartement",
+              "living_area_m2": 60,
+              "construction_year": 1972,
+              "construction_period": "1948-1974",
+              "address": "12 rue des Tilleuls 86000 Poitiers",
+              "ban_id": "86194_0120_00012",
+              "citycode": "86194"
+            }
+          ],
+          "source": "ademe_dpe",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "counts": {
+          "value": {
+            "total": 1,
+            "existing": 1,
+            "new": 0
+          },
+          "source": "ademe_dpe",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "ban_id": {
+          "value": "86194_0120_00012",
+          "source": "geoplateforme_geocodage",
+          "retrieved_at": null,
+          "reason": null
+        }
+      },
+      "warnings": [],
+      "errors": [],
+      "sources": {
+        "geoplateforme_geocodage": {
+          "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+          "url": "https://data.geopf.fr/geocodage",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_cadastre": {
+          "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+          "url": "https://apicarto.ign.fr/api/cadastre",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_gpu": {
+          "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+          "url": "https://apicarto.ign.fr/api/gpu",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "dvf_geo": {
+          "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+          "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "ademe_dpe": {
+          "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+          "url": "https://data.ademe.fr/datasets/dpe03existant",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "georisques": {
+          "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+          "url": "https://georisques.gouv.fr/api/v1",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+        },
+        "foncier_mcp": {
+          "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+          "url": "https://github.com/1000vario/foncier-mcp",
+          "licence": "MIT"
+        }
+      },
+      "generated_at": "2026-10-11T14:05:03+00:00",
+      "duration_ms": 900
+    },
+    {
+      "ok": false,
+      "tool": "get_risks",
+      "input": {
+        "parcel_id": "86194000DL0580",
+        "fixture": "synthetic"
+      },
+      "data": null,
+      "warnings": [],
+      "errors": [
+        {
+          "code": "source_unavailable",
+          "message": "Georisques timed out after 20 s",
+          "retryable": true,
+          "source": "georisques"
+        }
+      ],
+      "sources": {
+        "geoplateforme_geocodage": {
+          "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+          "url": "https://data.geopf.fr/geocodage",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_cadastre": {
+          "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+          "url": "https://apicarto.ign.fr/api/cadastre",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "apicarto_gpu": {
+          "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+          "url": "https://apicarto.ign.fr/api/gpu",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "dvf_geo": {
+          "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+          "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "ademe_dpe": {
+          "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+          "url": "https://data.ademe.fr/datasets/dpe03existant",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+        },
+        "georisques": {
+          "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+          "url": "https://georisques.gouv.fr/api/v1",
+          "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+        },
+        "foncier_mcp": {
+          "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+          "url": "https://github.com/1000vario/foncier-mcp",
+          "licence": "MIT"
+        }
+      },
+      "generated_at": "2026-10-11T14:05:03+00:00",
+      "duration_ms": 900
+    }
+  ],
+  "fixture": "synthetic"
+}

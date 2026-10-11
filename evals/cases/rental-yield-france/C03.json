@@ -1,0 +1,74 @@
+{
+  "id": "C03",
+  "skill": "rental-yield-france",
+  "title": "Micro-foncier, TMI 11",
+  "question": "Studio 90 000 EUR, 7 000 EUR de frais, loyer 450 EUR hors charges, charges 300 EUR, taxe fonciere 500 EUR, tranche 11 %, micro-foncier. Rendements et cash flow ?",
+  "inputs": {
+    "price": 90000,
+    "fees": 7000,
+    "works": 0,
+    "rent_monthly": 450,
+    "charges_annual": 300,
+    "property_tax": 500,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "micro-foncier",
+    "tmi": 0.11,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.gross_yield_pct": {
+      "value": 6.0,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 4.7423,
+      "tolerance": 0.011
+    },
+    "summary.taxable_income_year1": {
+      "value": 3780.0,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 1065.96,
+      "tolerance": 0.51
+    },
+    "summary.net_after_tax_yield_year1_pct": {
+      "value": 3.6434,
+      "tolerance": 0.011
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": 294.5,
+      "tolerance": 0.51
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "11 ?%",
+    "17[,.]2 ?%"
+  ],
+  "hand_computation": "rent 5 400; taxable 5 400 x 0.7 = 3 780; IR 11 % = 415.80; PS 650.16; tax 1 065.96; net (5 400 - 800) / 97 000 = 4.7423 %; after tax 3 534.04 / 97 000 = 3.6434 %; monthly 294.50.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

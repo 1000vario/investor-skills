@@ -1,0 +1,53 @@
+{
+  "id": "A15",
+  "skill": "french-company-accounts",
+  "title": "TotalEnergies SE, closing 2025-12-31, comptes annuels complets",
+  "question": "Lis les derniers comptes publies de TotalEnergies SE (SIREN 542051180) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre. Quel est le chiffre d'affaires consolide 2025 ? Si la donnee n'existe pas dans les sources, dis-le.",
+  "inputs": {
+    "siren": "542051180",
+    "social": false,
+    "recorded": "recorded/542051180.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "C",
+    "turnover_eur": 5190000000,
+    "net_result_eur": 13721000000,
+    "net_margin_pct": 264.37,
+    "ratio": null,
+    "previous_closings": [
+      {
+        "closing_date": "2023-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 237128000000,
+        "net_result_eur": 21510000000
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 214550000000,
+        "net_result_eur": 16031000000
+      }
+    ],
+    "annuaire_finances": {
+      "2024": {
+        "ca": 214550000000,
+        "resultat_net": 16031000000
+      }
+    }
+  },
+  "must_flag": [
+    "type of accounts differs"
+  ],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 13 721 000 000 / 5 190 000 000 = 264.37 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

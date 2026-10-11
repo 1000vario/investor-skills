@@ -1,0 +1,40 @@
+{
+  "id": "L08",
+  "skill": "land-due-diligence-france",
+  "title": "Le Mans, no sale within 300 m",
+  "question": "Fais la due diligence fonciere de la parcelle 72181000DT0640 a Le Mans a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 300 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 250000 EUR pour 100 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation. Si aucune vente n'est disponible, dis-le sans inventer de prix.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L08.json",
+    "asking_price": 250000,
+    "surface": 100,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 0,
+      "info": 0
+    },
+    "flag_codes": [
+      "no_comparable_sale"
+    ],
+    "stats": null,
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [
+      "comparable|vente|sale"
+    ],
+    "orange_flag_keywords": []
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "no mutation in the 300 m radius over 2021-2025: no EUR/m2, no median, no gap; asking 250000/100=2500 EUR/m2 stated without comparison",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

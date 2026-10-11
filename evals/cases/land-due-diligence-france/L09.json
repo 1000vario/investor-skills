@@ -1,0 +1,43 @@
+{
+  "id": "L09",
+  "skill": "land-due-diligence-france",
+  "title": "Metz, DVF not covered in Moselle",
+  "question": "Fais la due diligence fonciere de la parcelle 57463000SB0021 a Metz a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 220000 EUR pour 90 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation. Si les ventes ne sont pas disponibles, explique pourquoi sans inventer de prix.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L09.json",
+    "asking_price": 220000,
+    "surface": 90,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 1,
+      "info": 0
+    },
+    "flag_codes": [
+      "sales_unavailable",
+      "tool_error"
+    ],
+    "stats": null,
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [
+      "DVF|couvert|covered|Moselle|disponible|available"
+    ],
+    "orange_flag_keywords": [
+      "not_covered|couvert|covered|DVF"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "sales section missing with reason not_covered: no comparable, no median, no gap; nothing to compute",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

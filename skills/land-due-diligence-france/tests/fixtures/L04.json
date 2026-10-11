@@ -1,0 +1,408 @@
+{
+  "ok": true,
+  "tool": "summarize_parcel",
+  "input": {
+    "parcel_id": "49007000ZK0203",
+    "radius_m": 500,
+    "fixture": "synthetic"
+  },
+  "data": {
+    "parcel": {
+      "value": {
+        "id": "49007000ZK0203",
+        "code_insee": "49007",
+        "com_abs": "000",
+        "section": "ZK",
+        "numero": "0203",
+        "contenance_m2": 450,
+        "centroid": [
+          -0.5632,
+          47.4784
+        ]
+      },
+      "source": "apicarto_cadastre",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "geocoding": {
+      "value": null,
+      "source": "geoplateforme_geocodage",
+      "retrieved_at": null,
+      "reason": "lookup by parcel id, no address was geocoded"
+    },
+    "centroid": {
+      "value": [
+        -0.5632,
+        47.4784
+      ],
+      "source": "foncier_mcp",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "sales": {
+      "files": {
+        "value": [
+          "geo-dvf 2021 full.csv.gz",
+          "geo-dvf 2022 full.csv.gz",
+          "geo-dvf 2023 full.csv.gz",
+          "geo-dvf 2024 full.csv.gz",
+          "geo-dvf 2025 full.csv.gz"
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "years": {
+        "value": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel": {
+        "value": [],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel_count": {
+        "value": 0,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby": {
+        "value": [
+          {
+            "mutation_id": "2023-100001",
+            "date": "2023-09-14",
+            "nature": "Vente",
+            "price_eur": 210000,
+            "address": "3 avenue de la Gare",
+            "postcode": "49000",
+            "commune": "Angers",
+            "parcels": [
+              "49007000ZK0901"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "49007000ZK0901",
+                "type": "Maison",
+                "built_area_m2": 140,
+                "rooms": 5,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "49007000ZK0901",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": -0.5622,
+            "lat": 47.4784,
+            "distance_m": 310
+          },
+          {
+            "mutation_id": "2025-100002",
+            "date": "2025-04-02",
+            "nature": "Vente",
+            "price_eur": 272000,
+            "address": "4 rue du Moulin",
+            "postcode": "49000",
+            "commune": "Angers",
+            "parcels": [
+              "49007000ZK0902"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "49007000ZK0902",
+                "type": "Maison",
+                "built_area_m2": 160,
+                "rooms": 6,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "49007000ZK0902",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": -0.5612,
+            "lat": 47.4784,
+            "distance_m": 470
+          }
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby_radius_m": {
+        "value": 500,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      }
+    },
+    "zoning": {
+      "municipality": {
+        "value": {
+          "insee": "49007",
+          "name": "Angers",
+          "is_rnu": false,
+          "is_coastline": false,
+          "is_deleted": false
+        },
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "planning_document": {
+        "value": [
+          {
+            "id": "PLU_49007",
+            "type": "PLU",
+            "title": "PLU de Angers",
+            "authority_code": "49007",
+            "partition": "DU_49007",
+            "gpu_status": "active",
+            "gpu_published_at": "2024-03-01"
+          }
+        ],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "zones": {
+        "value": [
+          {
+            "label": "A",
+            "long_label": "Zone A",
+            "type": "A",
+            "type_meaning": "agricultural zone",
+            "document_id": "PLU_49007",
+            "validated_on": "2021-02-15",
+            "approved_on": "2021-02-15",
+            "regulation_file": "PLU_reglement.pdf",
+            "regulation_url": "https://data.geopf.fr/annexes/gpu/documents/PLU/PLU_reglement.pdf",
+            "gpu_status": "active",
+            "gpu_published_at": "2024-03-01"
+          }
+        ],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "prescriptions": {
+        "value": [],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "public_utility_easements": {
+        "value": [],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "lookup_point": {
+        "value": {
+          "lon": -0.5632,
+          "lat": 47.4784
+        },
+        "source": "foncier_mcp",
+        "retrieved_at": null,
+        "reason": null
+      }
+    },
+    "energy_diagnostics": {
+      "address": {
+        "value": {
+          "label": "12 Rue des Tilleuls 49000 Angers",
+          "ban_id": "49007_0120_00012",
+          "match_type": "housenumber",
+          "distance_m": 9
+        },
+        "source": "geoplateforme_geocodage",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "diagnostics": {
+        "value": [],
+        "source": "ademe_dpe",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "counts": {
+        "value": {
+          "total": 0,
+          "existing": 0,
+          "new": 0
+        },
+        "source": "ademe_dpe",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "ban_id": {
+        "value": "49007_0120_00012",
+        "source": "geoplateforme_geocodage",
+        "retrieved_at": null,
+        "reason": null
+      }
+    },
+    "risks": {
+      "insee": {
+        "value": "49007",
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "commune": {
+        "risks_inventory": {
+          "value": [],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "seismic_zone": {
+          "value": {
+            "zone_code": "2",
+            "label": "Zone 2 (faible)"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "radon_potential": {
+          "value": {
+            "class": "1",
+            "meaning": "low potential"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "natural_disaster_orders": {
+          "value": {
+            "count": 0,
+            "orders": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_risk_territories": {
+          "value": [],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      },
+      "point": {
+        "lookup_point": {
+          "value": {
+            "lon": -0.5632,
+            "lat": 47.4784
+          },
+          "source": "foncier_mcp",
+          "retrieved_at": null,
+          "reason": null
+        },
+        "clay_shrink_swell": {
+          "value": {
+            "exposure_code": "2",
+            "label": "Exposition moyenne"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_zoning_100m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "underground_cavities_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "ground_movements_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "classified_installations_1km": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      }
+    }
+  },
+  "warnings": [],
+  "errors": [],
+  "sources": {
+    "geoplateforme_geocodage": {
+      "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+      "url": "https://data.geopf.fr/geocodage",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_cadastre": {
+      "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+      "url": "https://apicarto.ign.fr/api/cadastre",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_gpu": {
+      "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+      "url": "https://apicarto.ign.fr/api/gpu",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "dvf_geo": {
+      "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+      "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "ademe_dpe": {
+      "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+      "url": "https://data.ademe.fr/datasets/dpe03existant",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "georisques": {
+      "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+      "url": "https://georisques.gouv.fr/api/v1",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+    },
+    "foncier_mcp": {
+      "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+      "url": "https://github.com/1000vario/foncier-mcp",
+      "licence": "MIT"
+    }
+  },
+  "generated_at": "2026-10-11T14:05:03+00:00",
+  "duration_ms": 4210
+}

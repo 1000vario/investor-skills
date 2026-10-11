@@ -1,0 +1,74 @@
+{
+  "id": "C01",
+  "skill": "rental-yield-france",
+  "title": "Micro-foncier, no loan, TMI 30",
+  "question": "J'achete un appartement 150 000 EUR, 12 000 EUR de frais, loue 650 EUR par mois hors charges. Charges de proprietaire 600 EUR par an, taxe fonciere 700 EUR. Je suis dans la tranche a 30 %, micro-foncier. Rendement brut, net, net d'impot et cash flow mensuel ?",
+  "inputs": {
+    "price": 150000,
+    "fees": 12000,
+    "works": 0,
+    "rent_monthly": 650,
+    "charges_annual": 600,
+    "property_tax": 700,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "micro-foncier",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.gross_yield_pct": {
+      "value": 5.2,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 4.0123,
+      "tolerance": 0.011
+    },
+    "summary.taxable_income_year1": {
+      "value": 5460.0,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 2577.12,
+      "tolerance": 0.51
+    },
+    "summary.net_after_tax_yield_year1_pct": {
+      "value": 2.4215,
+      "tolerance": 0.011
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": 326.91,
+      "tolerance": 0.51
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "15 ?000",
+    "30 ?%"
+  ],
+  "hand_computation": "rent 7 800; gross 7 800 / 150 000 = 5.20 %; net (7 800 - 600 - 700) / 162 000 = 4.0123 %; micro-foncier 30 % abatement (R1): taxable 5 460; IR 30 % = 1 638; PS 17.2 % = 939.12; tax 2 577.12; after tax (6 500 - 2 577.12) / 162 000 = 2.4215 %; monthly (6 500 - 2 577.12) / 12 = 326.91.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

@@ -1,0 +1,69 @@
+{
+  "id": "C14",
+  "skill": "rental-yield-france",
+  "title": "Reel foncier, interest above rent, carried 10 years",
+  "question": "Appartement 250 000 EUR, frais 18 000 EUR, loyer 500 EUR hors charges, aucune charge, tranche 41 %, regime reel, pret 240 000 EUR a 3,5 % sur 25 ans sans assurance. Que devient l'excedent d'interets ?",
+  "inputs": {
+    "price": 250000,
+    "fees": 18000,
+    "works": 0,
+    "rent_monthly": 500,
+    "charges_annual": 0,
+    "property_tax": 0,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "reel-foncier",
+    "tmi": 0.41,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 240000,
+      "rate": 0.035,
+      "years": 25,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.monthly_loan_payment": {
+      "value": 1201.5,
+      "tolerance": 0.51
+    },
+    "years[0].loan_interest": {
+      "value": 8302.52,
+      "tolerance": 1.0
+    },
+    "years[0].carry_added": {
+      "value": 2302.52,
+      "tolerance": 1.0
+    },
+    "years[0].deficit_on_global_income": {
+      "value": 0.0,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 0.0,
+      "tolerance": 0.51
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "10 ans|dix ans|ten years"
+  ],
+  "hand_computation": "payment 1 201.50; interest 8 302.52 against rent 6 000: the 2 302.52 excess is an interest deficit, never on global income, carried 10 years (R3).",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

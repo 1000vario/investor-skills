@@ -1,0 +1,48 @@
+{
+  "id": "L06",
+  "skill": "land-due-diligence-france",
+  "title": "Lille, latest DPE G with an older E",
+  "question": "Fais la due diligence fonciere de la parcelle 59350000HR1507 a Lille a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 170000 EUR pour 55 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation. Le logement peut-il etre loue en l'etat ?",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L06.json",
+    "asking_price": 170000,
+    "surface": 55,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 0,
+      "info": 2
+    },
+    "flag_codes": [
+      "dpe_f_or_g",
+      "dpe_several",
+      "icpe_nearby"
+    ],
+    "stats": {
+      "count": 4,
+      "median_eur_m2": 3050,
+      "mean_eur_m2": 3025,
+      "min_eur_m2": 2800,
+      "max_eur_m2": 3200
+    },
+    "gap_to_median_pct": 1.34,
+    "red_flag_keywords": [
+      "DPE|classe G|class G"
+    ],
+    "orange_flag_keywords": []
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 150000/50=3000, 208000/65=3200, 224000/80=2800, 139500/45=3100; sorted 2800 3000 3100 3200; median (3000+3100)/2=3050; mean 12100/4=3025; asking 170000/55=3090.91 -> gap 3090.91/3050-1=+1.34 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

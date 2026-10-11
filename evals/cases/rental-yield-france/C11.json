@@ -1,0 +1,73 @@
+{
+  "id": "C11",
+  "skill": "rental-yield-france",
+  "title": "LMNP reel, depreciation capped by art. 39 C, carried forward",
+  "question": "Meme meuble 100 000 EUR, mais loyer 250 EUR hors charges, charges 1 000 EUR, tranche 30 %, LMNP au reel. L'amortissement passe-t-il en entier ?",
+  "inputs": {
+    "price": 100000,
+    "fees": 0,
+    "works": 0,
+    "rent_monthly": 250,
+    "charges_annual": 1000,
+    "property_tax": 0,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "lmnp-reel",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "years[0].depreciation_used": {
+      "value": 2000.0,
+      "tolerance": 0.51
+    },
+    "years[0].depreciation_carried": {
+      "value": 833.33,
+      "tolerance": 0.51
+    },
+    "years[1].depreciation_carried": {
+      "value": 1666.67,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 0.0,
+      "tolerance": 0.51
+    },
+    "summary.gross_yield_pct": {
+      "value": 3.0,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 2.0,
+      "tolerance": 0.011
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "39 ?C|report|carried"
+  ],
+  "hand_computation": "rent 3 000; cap = 3 000 - 1 000 = 2 000 (R7, art. 39 C); 2 833.33 - 2 000 = 833.33 carried, 1 666.67 after year 2; taxable 0.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

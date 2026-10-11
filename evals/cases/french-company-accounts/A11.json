@@ -1,0 +1,53 @@
+{
+  "id": "A11",
+  "skill": "french-company-accounts",
+  "title": "Societe Bic, closing 2025-12-31, comptes annuels complets",
+  "question": "Lis les derniers comptes publies de Societe Bic (SIREN 552008443) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre. Compare 2025 a 2024 : la baisse du chiffre d'affaires est-elle reelle ?",
+  "inputs": {
+    "siren": "552008443",
+    "social": false,
+    "recorded": "recorded/552008443.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "C",
+    "turnover_eur": 666788000,
+    "net_result_eur": 91842000,
+    "net_margin_pct": 13.77,
+    "ratio": null,
+    "previous_closings": [
+      {
+        "closing_date": "2023-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 2263342000,
+        "net_result_eur": 226515000
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 2196635000,
+        "net_result_eur": 212012000
+      }
+    ],
+    "annuaire_finances": {
+      "2024": {
+        "ca": 2196635000,
+        "resultat_net": 212012000
+      }
+    }
+  },
+  "must_flag": [
+    "type of accounts differs"
+  ],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 91 842 000 / 666 788 000 = 13.77 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

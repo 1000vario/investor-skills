@@ -1,0 +1,52 @@
+{
+  "id": "C02",
+  "skill": "rental-yield-france",
+  "title": "Micro-foncier refused, rent above 15 000 EUR",
+  "question": "Appartement 250 000 EUR, frais 18 000 EUR, loyer 1 300 EUR par mois hors charges, charges 1 000 EUR, taxe fonciere 1 200 EUR, tranche 30 %. Je veux le micro-foncier. Quel rendement net d'impot ?",
+  "inputs": {
+    "price": 250000,
+    "fees": 18000,
+    "works": 0,
+    "rent_monthly": 1300,
+    "charges_annual": 1000,
+    "property_tax": 1200,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "micro-foncier",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {},
+  "expect_refusal": {
+    "rule": "R1",
+    "reason": "rent 15 600 EUR above 15 000 EUR"
+  },
+  "expect_warning": null,
+  "must_mention": [
+    "15 ?000",
+    "r[ée]el"
+  ],
+  "hand_computation": "rent 1 300 x 12 = 15 600 > 15 000 (R1, CGI art. 32): micro-foncier not open.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

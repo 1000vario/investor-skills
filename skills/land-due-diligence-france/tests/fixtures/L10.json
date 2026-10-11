@@ -1,0 +1,400 @@
+{
+  "ok": true,
+  "tool": "summarize_parcel",
+  "input": {
+    "parcel_id": "99901000ZA0012",
+    "radius_m": 500,
+    "fixture": "synthetic"
+  },
+  "data": {
+    "parcel": {
+      "value": {
+        "id": "99901000ZA0012",
+        "code_insee": "99901",
+        "com_abs": "000",
+        "section": "ZA",
+        "numero": "0012",
+        "contenance_m2": 450,
+        "centroid": [
+          0.5,
+          46.5
+        ]
+      },
+      "source": "apicarto_cadastre",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "geocoding": {
+      "value": null,
+      "source": "geoplateforme_geocodage",
+      "retrieved_at": null,
+      "reason": "lookup by parcel id, no address was geocoded"
+    },
+    "centroid": {
+      "value": [
+        0.5,
+        46.5
+      ],
+      "source": "foncier_mcp",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "sales": {
+      "files": {
+        "value": [
+          "geo-dvf 2021 full.csv.gz",
+          "geo-dvf 2022 full.csv.gz",
+          "geo-dvf 2023 full.csv.gz",
+          "geo-dvf 2024 full.csv.gz",
+          "geo-dvf 2025 full.csv.gz"
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "years": {
+        "value": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel": {
+        "value": [],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel_count": {
+        "value": 0,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby": {
+        "value": [
+          {
+            "mutation_id": "2022-100001",
+            "date": "2022-07-07",
+            "nature": "Vente",
+            "price_eur": 120000,
+            "address": "3 avenue de la Gare",
+            "postcode": "99901",
+            "commune": "Commune synthetique A",
+            "parcels": [
+              "99901000ZA0901"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "99901000ZA0901",
+                "type": "Maison",
+                "built_area_m2": 120,
+                "rooms": 4,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "99901000ZA0901",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 0.501,
+            "lat": 46.5,
+            "distance_m": 200
+          },
+          {
+            "mutation_id": "2024-100002",
+            "date": "2024-03-29",
+            "nature": "Vente",
+            "price_eur": 165000,
+            "address": "4 rue du Moulin",
+            "postcode": "99901",
+            "commune": "Commune synthetique A",
+            "parcels": [
+              "99901000ZA0902"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "99901000ZA0902",
+                "type": "Maison",
+                "built_area_m2": 150,
+                "rooms": 6,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "99901000ZA0902",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 0.502,
+            "lat": 46.5,
+            "distance_m": 350
+          },
+          {
+            "mutation_id": "2023-100003",
+            "date": "2023-05-15",
+            "nature": "Vente",
+            "price_eur": 95000,
+            "address": "5 impasse des Ormes",
+            "postcode": "99901",
+            "commune": "Commune synthetique A",
+            "parcels": [
+              "99901000ZA0903"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "99901000ZA0903",
+                "type": "Maison",
+                "built_area_m2": 100,
+                "rooms": 4,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "99901000ZA0903",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 0.503,
+            "lat": 46.5,
+            "distance_m": 480
+          }
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby_radius_m": {
+        "value": 500,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      }
+    },
+    "zoning": {
+      "municipality": {
+        "value": {
+          "insee": "99901",
+          "name": "Commune synthetique A",
+          "is_rnu": true,
+          "is_coastline": false,
+          "is_deleted": false
+        },
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "planning_document": {
+        "value": null,
+        "source": "apicarto_gpu",
+        "retrieved_at": null,
+        "reason": "commune under the RNU (reglement national d'urbanisme): no local planning document"
+      },
+      "zones": {
+        "value": null,
+        "source": "apicarto_gpu",
+        "retrieved_at": null,
+        "reason": "commune under the RNU (reglement national d'urbanisme): no local planning document"
+      },
+      "prescriptions": {
+        "value": null,
+        "source": "apicarto_gpu",
+        "retrieved_at": null,
+        "reason": "commune under the RNU (reglement national d'urbanisme): no local planning document"
+      },
+      "public_utility_easements": {
+        "value": [],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "lookup_point": {
+        "value": {
+          "lon": 0.5,
+          "lat": 46.5
+        },
+        "source": "foncier_mcp",
+        "retrieved_at": null,
+        "reason": null
+      }
+    },
+    "energy_diagnostics": {
+      "address": {
+        "value": null,
+        "source": "geoplateforme_geocodage",
+        "retrieved_at": null,
+        "reason": "no house-number address within 50 m of the parcel"
+      },
+      "diagnostics": {
+        "value": null,
+        "source": "ademe_dpe",
+        "retrieved_at": null,
+        "reason": "no house-number address within 50 m of the parcel"
+      },
+      "counts": {
+        "value": null,
+        "source": "ademe_dpe",
+        "retrieved_at": null,
+        "reason": "no house-number address within 50 m of the parcel"
+      }
+    },
+    "risks": {
+      "insee": {
+        "value": "99901",
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "commune": {
+        "risks_inventory": {
+          "value": [],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "seismic_zone": {
+          "value": {
+            "zone_code": "2",
+            "label": "Zone 2 (faible)"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "radon_potential": {
+          "value": {
+            "class": "1",
+            "meaning": "low potential"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "natural_disaster_orders": {
+          "value": {
+            "count": 0,
+            "orders": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_risk_territories": {
+          "value": [],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      },
+      "point": {
+        "lookup_point": {
+          "value": {
+            "lon": 0.5,
+            "lat": 46.5
+          },
+          "source": "foncier_mcp",
+          "retrieved_at": null,
+          "reason": null
+        },
+        "clay_shrink_swell": {
+          "value": {
+            "exposure_code": "3",
+            "label": "Exposition forte"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_zoning_100m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "underground_cavities_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "ground_movements_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "classified_installations_1km": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      }
+    }
+  },
+  "warnings": [],
+  "errors": [],
+  "sources": {
+    "geoplateforme_geocodage": {
+      "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+      "url": "https://data.geopf.fr/geocodage",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_cadastre": {
+      "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+      "url": "https://apicarto.ign.fr/api/cadastre",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_gpu": {
+      "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+      "url": "https://apicarto.ign.fr/api/gpu",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "dvf_geo": {
+      "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+      "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "ademe_dpe": {
+      "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+      "url": "https://data.ademe.fr/datasets/dpe03existant",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "georisques": {
+      "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+      "url": "https://georisques.gouv.fr/api/v1",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+    },
+    "foncier_mcp": {
+      "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+      "url": "https://github.com/1000vario/foncier-mcp",
+      "licence": "MIT"
+    }
+  },
+  "generated_at": "2026-10-11T14:05:03+00:00",
+  "duration_ms": 4210
+}

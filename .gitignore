@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Local secrets and environment, never committed
+.env
+.env.*
+*.local
+secrets/
+
+# Eval raw transcripts can be large; dated summaries are kept
+evals/results/raw/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

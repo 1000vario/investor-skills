@@ -1,0 +1,50 @@
+{
+  "id": "L13",
+  "skill": "land-due-diligence-france",
+  "title": "Orleans, zone 1AU to be urbanised, prescriptions",
+  "question": "Fais la due diligence fonciere de la parcelle 45234000BN0450 a Orleans a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 300000 EUR pour 110 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L13.json",
+    "asking_price": 300000,
+    "surface": 110,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 0,
+      "orange": 2,
+      "info": 2
+    },
+    "flag_codes": [
+      "dpe_none",
+      "few_comparables",
+      "prescriptions",
+      "zone_to_be_urbanised"
+    ],
+    "stats": {
+      "count": 2,
+      "median_eur_m2": 2400,
+      "mean_eur_m2": 2400,
+      "min_eur_m2": 2300,
+      "max_eur_m2": 2500
+    },
+    "gap_to_median_pct": 13.64,
+    "red_flag_keywords": [],
+    "orange_flag_keywords": [
+      "AU|urbanis",
+      "comparable"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 250000/100=2500, 276000/120=2300; median (2300+2500)/2=2400; mean 2400; asking 300000/110=2727.27 -> gap 2727.27/2400-1=+13.64 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

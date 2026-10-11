@@ -1,0 +1,52 @@
+{
+  "id": "L04",
+  "skill": "land-due-diligence-france",
+  "title": "Angers outskirts, agricultural zone A",
+  "question": "Fais la due diligence fonciere de la parcelle 49007000ZK0203 a Angers a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 180000 EUR pour 150 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation. Peut-on y construire une maison ?",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L04.json",
+    "asking_price": 180000,
+    "surface": 150,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 1,
+      "info": 3
+    },
+    "flag_codes": [
+      "asking_below_median",
+      "clay_medium",
+      "dpe_none",
+      "few_comparables",
+      "not_constructible"
+    ],
+    "stats": {
+      "count": 2,
+      "median_eur_m2": 1600,
+      "mean_eur_m2": 1600,
+      "min_eur_m2": 1500,
+      "max_eur_m2": 1700
+    },
+    "gap_to_median_pct": -25.0,
+    "red_flag_keywords": [
+      "agricole|agricultural|zone A|constructible"
+    ],
+    "orange_flag_keywords": [
+      "comparable"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 210000/140=1500, 272000/160=1700; median (1500+1700)/2=1600; mean 1600; asking 180000/150=1200 -> gap 1200/1600-1=-25.0 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

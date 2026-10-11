@@ -1,0 +1,571 @@
+{
+  "ok": true,
+  "tool": "summarize_parcel",
+  "input": {
+    "parcel_id": "51454000CV0066",
+    "radius_m": 500,
+    "fixture": "synthetic"
+  },
+  "data": {
+    "parcel": {
+      "value": {
+        "id": "51454000CV0066",
+        "code_insee": "51454",
+        "com_abs": "000",
+        "section": "CV",
+        "numero": "0066",
+        "contenance_m2": 450,
+        "centroid": [
+          4.0317,
+          49.2583
+        ]
+      },
+      "source": "apicarto_cadastre",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "geocoding": {
+      "value": null,
+      "source": "geoplateforme_geocodage",
+      "retrieved_at": null,
+      "reason": "lookup by parcel id, no address was geocoded"
+    },
+    "centroid": {
+      "value": [
+        4.0317,
+        49.2583
+      ],
+      "source": "foncier_mcp",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "sales": {
+      "files": {
+        "value": [
+          "geo-dvf 2021 full.csv.gz",
+          "geo-dvf 2022 full.csv.gz",
+          "geo-dvf 2023 full.csv.gz",
+          "geo-dvf 2024 full.csv.gz",
+          "geo-dvf 2025 full.csv.gz"
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "years": {
+        "value": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel": {
+        "value": [],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel_count": {
+        "value": 0,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby": {
+        "value": [
+          {
+            "mutation_id": "2023-100001",
+            "date": "2023-11-11",
+            "nature": "Vente",
+            "price_eur": 176000,
+            "address": "3 avenue de la Gare",
+            "postcode": "51100",
+            "commune": "Reims",
+            "parcels": [
+              "51454000CV0901"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "51454000CV0901",
+                "type": "Maison",
+                "built_area_m2": 80,
+                "rooms": 3,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "51454000CV0901",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 4.0327,
+            "lat": 49.2583,
+            "distance_m": 70
+          },
+          {
+            "mutation_id": "2024-100002",
+            "date": "2024-04-04",
+            "nature": "Vente",
+            "price_eur": 218500,
+            "address": "4 rue du Moulin",
+            "postcode": "51100",
+            "commune": "Reims",
+            "parcels": [
+              "51454000CV0902"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "51454000CV0902",
+                "type": "Maison",
+                "built_area_m2": 95,
+                "rooms": 3,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "51454000CV0902",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 4.0337,
+            "lat": 49.2583,
+            "distance_m": 160
+          },
+          {
+            "mutation_id": "2022-100003",
+            "date": "2022-08-16",
+            "nature": "Vente",
+            "price_eur": 147000,
+            "address": "5 impasse des Ormes",
+            "postcode": "51100",
+            "commune": "Reims",
+            "parcels": [
+              "51454000CV0903"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "51454000CV0903",
+                "type": "Maison",
+                "built_area_m2": 70,
+                "rooms": 2,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "51454000CV0903",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 4.0347,
+            "lat": 49.2583,
+            "distance_m": 240
+          },
+          {
+            "mutation_id": "2025-100004",
+            "date": "2025-01-21",
+            "nature": "Vente",
+            "price_eur": 240000,
+            "address": "6 rue Pasteur",
+            "postcode": "51100",
+            "commune": "Reims",
+            "parcels": [
+              "51454000CV0904"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "51454000CV0904",
+                "type": "Maison",
+                "built_area_m2": 100,
+                "rooms": 4,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "51454000CV0904",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 4.0357,
+            "lat": 49.2583,
+            "distance_m": 310
+          },
+          {
+            "mutation_id": "2023-100005",
+            "date": "2023-03-03",
+            "nature": "Vente",
+            "price_eur": 400000,
+            "address": "7 allee des Peupliers",
+            "postcode": "51100",
+            "commune": "Reims",
+            "parcels": [
+              "51454000CV0905"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "51454000CV0905",
+                "type": "Maison",
+                "built_area_m2": 40,
+                "rooms": 1,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "51454000CV0905",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 4.0367,
+            "lat": 49.2583,
+            "distance_m": 390
+          },
+          {
+            "mutation_id": "2024-100006",
+            "date": "2024-07-07",
+            "nature": "Echange",
+            "price_eur": 150000,
+            "address": "8 rue Pasteur",
+            "postcode": "51100",
+            "commune": "Reims",
+            "parcels": [
+              "51454000CV0906"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "51454000CV0906",
+                "type": "Maison",
+                "built_area_m2": 90,
+                "rooms": 3,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "51454000CV0906",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 4.0377,
+            "lat": 49.2583,
+            "distance_m": 420
+          },
+          {
+            "mutation_id": "2022-100007",
+            "date": "2022-12-12",
+            "nature": "Vente",
+            "price_eur": 60000,
+            "address": "9 allee des Peupliers",
+            "postcode": "51100",
+            "commune": "Reims",
+            "parcels": [
+              "51454000CV0907"
+            ],
+            "buildings": [],
+            "land": [
+              {
+                "parcel_id": "51454000CV0907",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": 4.0387,
+            "lat": 49.2583,
+            "distance_m": 460
+          }
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby_radius_m": {
+        "value": 500,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      }
+    },
+    "zoning": {
+      "municipality": {
+        "value": {
+          "insee": "51454",
+          "name": "Reims",
+          "is_rnu": false,
+          "is_coastline": false,
+          "is_deleted": false
+        },
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "planning_document": {
+        "value": [
+          {
+            "id": "PLU_51454",
+            "type": "PLU",
+            "title": "PLU de Reims",
+            "authority_code": "51454",
+            "partition": "DU_51454",
+            "gpu_status": "active",
+            "gpu_published_at": "2024-03-01"
+          }
+        ],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "zones": {
+        "value": [
+          {
+            "label": "UA",
+            "long_label": "Zone UA",
+            "type": "U",
+            "type_meaning": "urban zone",
+            "document_id": "PLU_51454",
+            "validated_on": "2020-06-15",
+            "approved_on": "2020-06-15",
+            "regulation_file": "PLU_reglement.pdf",
+            "regulation_url": "https://data.geopf.fr/annexes/gpu/documents/PLU/PLU_reglement.pdf",
+            "gpu_status": "active",
+            "gpu_published_at": "2024-03-01"
+          }
+        ],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "prescriptions": {
+        "value": [],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "public_utility_easements": {
+        "value": [],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "lookup_point": {
+        "value": {
+          "lon": 4.0317,
+          "lat": 49.2583
+        },
+        "source": "foncier_mcp",
+        "retrieved_at": null,
+        "reason": null
+      }
+    },
+    "energy_diagnostics": {
+      "address": {
+        "value": {
+          "label": "12 Rue des Tilleuls 51100 Reims",
+          "ban_id": "51454_0120_00012",
+          "match_type": "housenumber",
+          "distance_m": 9
+        },
+        "source": "geoplateforme_geocodage",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "diagnostics": {
+        "value": [
+          {
+            "issued_on": "2024-02-28",
+            "valid_until": "2034-02-27",
+            "energy_class": "C",
+            "ghg_class": "C",
+            "primary_energy_kwh_m2_year": 150,
+            "ghg_kgco2_m2_year": 15,
+            "building_type": "maison",
+            "living_area_m2": 85,
+            "construction_year": 1975,
+            "construction_period": "1975-1977",
+            "address": "12 rue des Tilleuls 51100 Reims",
+            "ban_id": "51454_0120_00012",
+            "citycode": "51454"
+          }
+        ],
+        "source": "ademe_dpe",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "counts": {
+        "value": {
+          "total": 1,
+          "existing": 1,
+          "new": 0
+        },
+        "source": "ademe_dpe",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "ban_id": {
+        "value": "51454_0120_00012",
+        "source": "geoplateforme_geocodage",
+        "retrieved_at": null,
+        "reason": null
+      }
+    },
+    "risks": {
+      "insee": {
+        "value": "51454",
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "commune": {
+        "risks_inventory": {
+          "value": [],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "seismic_zone": {
+          "value": {
+            "zone_code": "2",
+            "label": "Zone 2 (faible)"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "radon_potential": {
+          "value": {
+            "class": "1",
+            "meaning": "low potential"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "natural_disaster_orders": {
+          "value": {
+            "count": 0,
+            "orders": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_risk_territories": {
+          "value": [],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      },
+      "point": {
+        "lookup_point": {
+          "value": {
+            "lon": 4.0317,
+            "lat": 49.2583
+          },
+          "source": "foncier_mcp",
+          "retrieved_at": null,
+          "reason": null
+        },
+        "clay_shrink_swell": {
+          "value": {
+            "exposure_code": "1",
+            "label": "Exposition faible"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_zoning_100m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "underground_cavities_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "ground_movements_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "classified_installations_1km": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      }
+    }
+  },
+  "warnings": [],
+  "errors": [],
+  "sources": {
+    "geoplateforme_geocodage": {
+      "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+      "url": "https://data.geopf.fr/geocodage",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_cadastre": {
+      "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+      "url": "https://apicarto.ign.fr/api/cadastre",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_gpu": {
+      "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+      "url": "https://apicarto.ign.fr/api/gpu",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "dvf_geo": {
+      "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+      "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "ademe_dpe": {
+      "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+      "url": "https://data.ademe.fr/datasets/dpe03existant",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "georisques": {
+      "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+      "url": "https://georisques.gouv.fr/api/v1",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+    },
+    "foncier_mcp": {
+      "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+      "url": "https://github.com/1000vario/foncier-mcp",
+      "licence": "MIT"
+    }
+  },
+  "generated_at": "2026-10-11T14:05:03+00:00",
+  "duration_ms": 4210
+}

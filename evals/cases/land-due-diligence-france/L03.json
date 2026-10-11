@@ -1,0 +1,50 @@
+{
+  "id": "L03",
+  "skill": "land-due-diligence-france",
+  "title": "Tours, flood zoning within 100 m, DPE E",
+  "question": "Fais la due diligence fonciere de la parcelle 37261000BX0077 a Tours a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, sans prix demande, et chaque fait avec sa source et sa date de consultation. Sans prix demande.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L03.json",
+    "asking_price": null,
+    "surface": null,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+    },
+    "flag_codes": [
+      "catnat_orders",
+      "dpe_e",
+      "flood_zone"
+    ],
+    "stats": {
+      "count": 3,
+      "median_eur_m2": 2000,
+      "mean_eur_m2": 2033.33,
+      "min_eur_m2": 1900,
+      "max_eur_m2": 2200
+    },
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [
+      "inond|flood"
+    ],
+    "orange_flag_keywords": [
+      "DPE|classe E|class E"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 220000/110=2000, 198000/90=2200, 247000/130=1900; sorted 1900 2000 2200; median 2000; mean 6100/3=2033.33",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

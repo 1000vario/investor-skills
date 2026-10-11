@@ -1,0 +1,47 @@
+{
+  "id": "L07",
+  "skill": "land-due-diligence-france",
+  "title": "Clermont-Ferrand, DPE F, significant radon potential",
+  "question": "Fais la due diligence fonciere de la parcelle 63113000IK0088 a Clermont-Ferrand a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, sans prix demande, et chaque fait avec sa source et sa date de consultation.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L07.json",
+    "asking_price": null,
+    "surface": null,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 0,
+      "info": 1
+    },
+    "flag_codes": [
+      "dpe_f_or_g",
+      "radon_high"
+    ],
+    "stats": {
+      "count": 3,
+      "median_eur_m2": 2200,
+      "mean_eur_m2": 2200,
+      "min_eur_m2": 2100,
+      "max_eur_m2": 2300
+    },
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [
+      "DPE|classe F|class F"
+    ],
+    "orange_flag_keywords": []
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 154000/70=2200, 230000/100=2300, 178500/85=2100; sorted 2100 2200 2300; median 2200; mean 6600/3=2200",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

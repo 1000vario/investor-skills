@@ -1,0 +1,49 @@
+{
+  "id": "L10",
+  "skill": "land-due-diligence-france",
+  "title": "Synthetic rural commune under the RNU, strong clay exposure",
+  "question": "Fais la due diligence fonciere de la parcelle 99901000ZA0012 a Commune synthetique A a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, sans prix demande, et chaque fait avec sa source et sa date de consultation. La commune n'a pas de PLU : que peut-on en conclure ?",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L10.json",
+    "asking_price": null,
+    "surface": null,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 0,
+      "orange": 2,
+      "info": 1
+    },
+    "flag_codes": [
+      "clay_strong",
+      "dpe_unavailable",
+      "rnu"
+    ],
+    "stats": {
+      "count": 3,
+      "median_eur_m2": 1000,
+      "mean_eur_m2": 1016.67,
+      "min_eur_m2": 950,
+      "max_eur_m2": 1100
+    },
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [],
+    "orange_flag_keywords": [
+      "RNU|document d'urbanisme|planning",
+      "argile|clay"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 120000/120=1000, 165000/150=1100, 95000/100=950; sorted 950 1000 1100; median 1000; mean 3050/3=1016.67",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

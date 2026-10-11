@@ -1,0 +1,56 @@
+{
+  "id": "A13",
+  "skill": "french-company-accounts",
+  "title": "Dassault Systemes, closing 2025-12-31, comptes consolides",
+  "question": "Lis les derniers comptes publies de Dassault Systemes (SIREN 322306440) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre.",
+  "inputs": {
+    "siren": "322306440",
+    "social": false,
+    "recorded": "recorded/322306440.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "K",
+    "turnover_eur": 6235800000,
+    "net_result_eur": 1187600000,
+    "net_margin_pct": 19.04,
+    "ratio": {
+      "name": "autonomie_financiere",
+      "value": 58.421
+    },
+    "previous_closings": [
+      {
+        "closing_date": "2023-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 5951400000,
+        "net_result_eur": 1050200000
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 6213600000,
+        "net_result_eur": 0
+      }
+    ],
+    "annuaire_finances": {
+      "2025": {
+        "ca": 6235800000,
+        "resultat_net": 1187600000
+      }
+    }
+  },
+  "must_flag": [
+    "EBE"
+  ],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 1 187 600 000 / 6 235 800 000 = 19.04 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

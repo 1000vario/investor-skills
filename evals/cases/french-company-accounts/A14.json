@@ -1,0 +1,54 @@
+{
+  "id": "A14",
+  "skill": "french-company-accounts",
+  "title": "Ubisoft Entertainment, closing 2025-03-31, comptes consolides",
+  "question": "Lis les derniers comptes publies de Ubisoft Entertainment (SIREN 335186094) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre. L'annuaire affiche l'exercice sous l'annee 2024 : explique.",
+  "inputs": {
+    "siren": "335186094",
+    "social": false,
+    "recorded": "recorded/335186094.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-03-31",
+    "type_bilan": "K",
+    "turnover_eur": 1899200000,
+    "net_result_eur": 0,
+    "net_margin_pct": 0.0,
+    "ratio": null,
+    "previous_closings": [
+      {
+        "closing_date": "2023-03-31",
+        "type_bilan": "K",
+        "turnover_eur": 1814300000,
+        "net_result_eur": -494700000
+      },
+      {
+        "closing_date": "2024-03-31",
+        "type_bilan": "C",
+        "turnover_eur": 2643600000,
+        "net_result_eur": 583000000
+      }
+    ],
+    "annuaire_finances": {
+      "2024": {
+        "ca": 1899200000,
+        "resultat_net": 0
+      }
+    }
+  },
+  "must_flag": [
+    "net result published as 0",
+    "type of accounts differs"
+  ],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 0 / 1 899 200 000 = 0.0 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "L01",
+  "skill": "land-due-diligence-france",
+  "title": "Rennes, urban zone, asking price at the median",
+  "question": "Fais la due diligence fonciere de la parcelle 35238000AB0042 a Rennes a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 310000 EUR pour 100 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L01.json",
+    "asking_price": 310000,
+    "surface": 100,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 0,
+      "orange": 0,
+      "info": 1
+    },
+    "flag_codes": [
+      "catnat_orders"
+    ],
+    "stats": {
+      "count": 5,
+      "median_eur_m2": 3100,
+      "mean_eur_m2": 3100,
+      "min_eur_m2": 2900,
+      "max_eur_m2": 3300
+    },
+    "gap_to_median_pct": 0.0,
+    "red_flag_keywords": [],
+    "orange_flag_keywords": []
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 300000/100=3000, 256000/80=3200, 348000/120=2900, 294500/95=3100, 231000/70=3300; sorted 2900 3000 3100 3200 3300; median 3100; mean 15500/5=3100; asking 310000/100=3100 -> gap 0.0 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

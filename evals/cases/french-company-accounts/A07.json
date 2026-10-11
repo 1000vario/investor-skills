@@ -1,0 +1,54 @@
+{
+  "id": "A07",
+  "skill": "french-company-accounts",
+  "title": "Bouygues, closing 2025-12-31, comptes consolides",
+  "question": "Lis les derniers comptes publies de Bouygues (SIREN 572015246) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre. De combien le resultat net a-t-il varie depuis 2024 ?",
+  "inputs": {
+    "siren": "572015246",
+    "social": false,
+    "recorded": "recorded/572015246.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "K",
+    "turnover_eur": 56877000000,
+    "net_result_eur": 1272000000,
+    "net_margin_pct": 2.24,
+    "ratio": {
+      "name": "autonomie_financiere",
+      "value": 20.331
+    },
+    "previous_closings": [
+      {
+        "closing_date": "2023-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 56017000000,
+        "net_result_eur": 1201000000
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 56752000000,
+        "net_result_eur": 1222000000
+      }
+    ],
+    "annuaire_finances": {
+      "2025": {
+        "ca": 56877000000,
+        "resultat_net": 1272000000
+      }
+    }
+  },
+  "must_flag": [],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 1 272 000 000 / 56 877 000 000 = 2.24 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

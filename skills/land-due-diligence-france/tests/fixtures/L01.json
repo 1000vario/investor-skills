@@ -1,0 +1,530 @@
+{
+  "ok": true,
+  "tool": "summarize_parcel",
+  "input": {
+    "parcel_id": "35238000AB0042",
+    "radius_m": 500,
+    "fixture": "synthetic"
+  },
+  "data": {
+    "parcel": {
+      "value": {
+        "id": "35238000AB0042",
+        "code_insee": "35238",
+        "com_abs": "000",
+        "section": "AB",
+        "numero": "0042",
+        "contenance_m2": 450,
+        "centroid": [
+          -1.6778,
+          48.1173
+        ]
+      },
+      "source": "apicarto_cadastre",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "geocoding": {
+      "value": null,
+      "source": "geoplateforme_geocodage",
+      "retrieved_at": null,
+      "reason": "lookup by parcel id, no address was geocoded"
+    },
+    "centroid": {
+      "value": [
+        -1.6778,
+        48.1173
+      ],
+      "source": "foncier_mcp",
+      "retrieved_at": "2026-10-11T14:05:00+00:00",
+      "reason": null
+    },
+    "sales": {
+      "files": {
+        "value": [
+          "geo-dvf 2021 full.csv.gz",
+          "geo-dvf 2022 full.csv.gz",
+          "geo-dvf 2023 full.csv.gz",
+          "geo-dvf 2024 full.csv.gz",
+          "geo-dvf 2025 full.csv.gz"
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "years": {
+        "value": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel": {
+        "value": [],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_on_parcel_count": {
+        "value": 0,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby": {
+        "value": [
+          {
+            "mutation_id": "2023-100001",
+            "date": "2023-04-12",
+            "nature": "Vente",
+            "price_eur": 300000,
+            "address": "3 avenue de la Gare",
+            "postcode": "35000",
+            "commune": "Rennes",
+            "parcels": [
+              "35238000AB0901"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "35238000AB0901",
+                "type": "Maison",
+                "built_area_m2": 100,
+                "rooms": 4,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "35238000AB0901",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": -1.6768,
+            "lat": 48.1173,
+            "distance_m": 120
+          },
+          {
+            "mutation_id": "2024-100002",
+            "date": "2024-09-03",
+            "nature": "Vente",
+            "price_eur": 256000,
+            "address": "4 rue du Moulin",
+            "postcode": "35000",
+            "commune": "Rennes",
+            "parcels": [
+              "35238000AB0902"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "35238000AB0902",
+                "type": "Maison",
+                "built_area_m2": 80,
+                "rooms": 3,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "35238000AB0902",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": -1.6758,
+            "lat": 48.1173,
+            "distance_m": 210
+          },
+          {
+            "mutation_id": "2022-100003",
+            "date": "2022-01-25",
+            "nature": "Vente",
+            "price_eur": 348000,
+            "address": "5 impasse des Ormes",
+            "postcode": "35000",
+            "commune": "Rennes",
+            "parcels": [
+              "35238000AB0903"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "35238000AB0903",
+                "type": "Maison",
+                "built_area_m2": 120,
+                "rooms": 4,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "35238000AB0903",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": -1.6748,
+            "lat": 48.1173,
+            "distance_m": 260
+          },
+          {
+            "mutation_id": "2025-100004",
+            "date": "2025-03-18",
+            "nature": "Vente",
+            "price_eur": 294500,
+            "address": "6 rue Pasteur",
+            "postcode": "35000",
+            "commune": "Rennes",
+            "parcels": [
+              "35238000AB0904"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "35238000AB0904",
+                "type": "Maison",
+                "built_area_m2": 95,
+                "rooms": 3,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "35238000AB0904",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": -1.6738,
+            "lat": 48.1173,
+            "distance_m": 330
+          },
+          {
+            "mutation_id": "2021-100005",
+            "date": "2021-11-09",
+            "nature": "Vente",
+            "price_eur": 231000,
+            "address": "7 allee des Peupliers",
+            "postcode": "35000",
+            "commune": "Rennes",
+            "parcels": [
+              "35238000AB0905"
+            ],
+            "buildings": [
+              {
+                "parcel_id": "35238000AB0905",
+                "type": "Maison",
+                "built_area_m2": 70,
+                "rooms": 2,
+                "lots": 0
+              }
+            ],
+            "land": [
+              {
+                "parcel_id": "35238000AB0905",
+                "nature": "sols",
+                "area_m2": 300
+              }
+            ],
+            "lon": -1.6728,
+            "lat": 48.1173,
+            "distance_m": 410
+          }
+        ],
+        "source": "dvf_geo",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "sales_nearby_radius_m": {
+        "value": 500,
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      }
+    },
+    "zoning": {
+      "municipality": {
+        "value": {
+          "insee": "35238",
+          "name": "Rennes",
+          "is_rnu": false,
+          "is_coastline": false,
+          "is_deleted": false
+        },
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "planning_document": {
+        "value": [
+          {
+            "id": "PLU_35238",
+            "type": "PLU",
+            "title": "PLU de Rennes",
+            "authority_code": "35238",
+            "partition": "DU_35238",
+            "gpu_status": "active",
+            "gpu_published_at": "2024-03-01"
+          }
+        ],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "zones": {
+        "value": [
+          {
+            "label": "UB",
+            "long_label": "Zone UB",
+            "type": "U",
+            "type_meaning": "urban zone",
+            "document_id": "PLU_35238",
+            "validated_on": "2020-06-15",
+            "approved_on": "2020-06-15",
+            "regulation_file": "PLU_reglement.pdf",
+            "regulation_url": "https://data.geopf.fr/annexes/gpu/documents/PLU/PLU_reglement.pdf",
+            "gpu_status": "active",
+            "gpu_published_at": "2024-03-01"
+          }
+        ],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "prescriptions": {
+        "value": [],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "public_utility_easements": {
+        "value": [],
+        "source": "apicarto_gpu",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "lookup_point": {
+        "value": {
+          "lon": -1.6778,
+          "lat": 48.1173
+        },
+        "source": "foncier_mcp",
+        "retrieved_at": null,
+        "reason": null
+      }
+    },
+    "energy_diagnostics": {
+      "address": {
+        "value": {
+          "label": "12 Rue des Tilleuls 35000 Rennes",
+          "ban_id": "35238_0120_00012",
+          "match_type": "housenumber",
+          "distance_m": 9
+        },
+        "source": "geoplateforme_geocodage",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "diagnostics": {
+        "value": [
+          {
+            "issued_on": "2023-05-10",
+            "valid_until": "2033-05-09",
+            "energy_class": "D",
+            "ghg_class": "D",
+            "primary_energy_kwh_m2_year": 220,
+            "ghg_kgco2_m2_year": 22,
+            "building_type": "maison",
+            "living_area_m2": 85,
+            "construction_year": 1975,
+            "construction_period": "1975-1977",
+            "address": "12 rue des Tilleuls 35000 Rennes",
+            "ban_id": "35238_0120_00012",
+            "citycode": "35238"
+          }
+        ],
+        "source": "ademe_dpe",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "counts": {
+        "value": {
+          "total": 1,
+          "existing": 1,
+          "new": 0
+        },
+        "source": "ademe_dpe",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "ban_id": {
+        "value": "35238_0120_00012",
+        "source": "geoplateforme_geocodage",
+        "retrieved_at": null,
+        "reason": null
+      }
+    },
+    "risks": {
+      "insee": {
+        "value": "35238",
+        "source": "foncier_mcp",
+        "retrieved_at": "2026-10-11T14:05:00+00:00",
+        "reason": null
+      },
+      "commune": {
+        "risks_inventory": {
+          "value": [
+            {
+              "code": "R1",
+              "label": "Mouvement de terrain"
+            }
+          ],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "seismic_zone": {
+          "value": {
+            "zone_code": "2",
+            "label": "Zone 2 (faible)"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "radon_potential": {
+          "value": {
+            "class": "1",
+            "meaning": "low potential"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "natural_disaster_orders": {
+          "value": {
+            "count": 1,
+            "orders": [
+              {
+                "code": "CAT1",
+                "hazard": "Inondations et coulees de boue",
+                "event_start": "2018-06-04",
+                "event_end": "2018-06-04",
+                "order_published_on": "2018-06-04"
+              }
+            ]
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_risk_territories": {
+          "value": [],
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      },
+      "point": {
+        "lookup_point": {
+          "value": {
+            "lon": -1.6778,
+            "lat": 48.1173
+          },
+          "source": "foncier_mcp",
+          "retrieved_at": null,
+          "reason": null
+        },
+        "clay_shrink_swell": {
+          "value": {
+            "exposure_code": "1",
+            "label": "Exposition faible"
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "flood_zoning_100m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "underground_cavities_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "ground_movements_500m": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        },
+        "classified_installations_1km": {
+          "value": {
+            "count": 0,
+            "items": []
+          },
+          "source": "georisques",
+          "retrieved_at": "2026-10-11T14:05:00+00:00",
+          "reason": null
+        }
+      }
+    }
+  },
+  "warnings": [],
+  "errors": [],
+  "sources": {
+    "geoplateforme_geocodage": {
+      "name": "IGN Geoplateforme geocoding service (Base Adresse Nationale index)",
+      "url": "https://data.geopf.fr/geocodage",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_cadastre": {
+      "name": "IGN API Carto, cadastre module (Parcellaire Express PCI)",
+      "url": "https://apicarto.ign.fr/api/cadastre",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "apicarto_gpu": {
+      "name": "IGN API Carto, urbanisme module (Geoportail de l urbanisme)",
+      "url": "https://apicarto.ign.fr/api/gpu",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "dvf_geo": {
+      "name": "Demandes de valeurs foncieres geolocalisees (DGFiP data, Etalab files)",
+      "url": "https://files.data.gouv.fr/geo-dvf/latest/csv/",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "ademe_dpe": {
+      "name": "ADEME, diagnostics de performance energetique (existing and new dwellings)",
+      "url": "https://data.ademe.fr/datasets/dpe03existant",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab)"
+    },
+    "georisques": {
+      "name": "Georisques API v1 (BRGM and Ministere de la Transition ecologique)",
+      "url": "https://georisques.gouv.fr/api/v1",
+      "licence": "Licence Ouverte / Open Licence 2.0 (Etalab), per the Georisques site footer"
+    },
+    "foncier_mcp": {
+      "name": "Computed by foncier-mcp from the sources above (geometry, distances, grouping)",
+      "url": "https://github.com/1000vario/foncier-mcp",
+      "licence": "MIT"
+    }
+  },
+  "generated_at": "2026-10-11T14:05:03+00:00",
+  "duration_ms": 4210
+}

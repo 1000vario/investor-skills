@@ -1,0 +1,56 @@
+{
+  "id": "A01",
+  "skill": "french-company-accounts",
+  "title": "Danone, closing 2025-12-31, comptes consolides",
+  "question": "Lis les derniers comptes publies de Danone (SIREN 552032534) : chiffre d'affaires, resultat net, marge nette, un ratio de structure, evolution sur trois exercices et anomalies des donnees publiees. Cite la source et la date de chaque chiffre.",
+  "inputs": {
+    "siren": "552032534",
+    "social": false,
+    "recorded": "recorded/552032534.json"
+  },
+  "expected": {
+    "latest_closing_date": "2025-12-31",
+    "type_bilan": "K",
+    "turnover_eur": 27376000000,
+    "net_result_eur": 2100000000,
+    "net_margin_pct": 7.67,
+    "ratio": {
+      "name": "autonomie_financiere",
+      "value": 37.652
+    },
+    "previous_closings": [
+      {
+        "closing_date": "2023-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 27661000000,
+        "net_result_eur": 0
+      },
+      {
+        "closing_date": "2024-12-31",
+        "type_bilan": "K",
+        "turnover_eur": 27376000000,
+        "net_result_eur": 0
+      }
+    ],
+    "annuaire_finances": {
+      "2025": {
+        "ca": 27376000000,
+        "resultat_net": 2100000000
+      }
+    }
+  },
+  "must_flag": [
+    "net result published as 0"
+  ],
+  "tolerance": {
+    "eur_relative": 0.005,
+    "pct_points": 0.05
+  },
+  "must_mention": [
+    "ratios_inpi_bce|data\\.economie\\.gouv\\.fr|INPI",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "net margin 2 100 000 000 / 27 376 000 000 = 7.67 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand reading on 2026-10-11 of the recorded responses of the API Recherche d'entreprises and of the dataset ratios_inpi_bce (data.economie.gouv.fr); net margin computed by hand as net result / turnover."
+}

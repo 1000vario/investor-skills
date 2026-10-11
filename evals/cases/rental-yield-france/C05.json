@@ -1,0 +1,73 @@
+{
+  "id": "C05",
+  "skill": "rental-yield-france",
+  "title": "Reel foncier with a loan, interest deducted",
+  "question": "Appartement 200 000 EUR, frais 15 000 EUR, loyer 900 EUR hors charges, charges 1 200 EUR, taxe fonciere 1 100 EUR, assurance 200 EUR, tranche 30 %, regime reel. Pret 180 000 EUR a 3,5 % sur 20 ans, assurance 0,3 %. Mensualite, impot et cash flow apres impot ?",
+  "inputs": {
+    "price": 200000,
+    "fees": 15000,
+    "works": 0,
+    "rent_monthly": 900,
+    "charges_annual": 1200,
+    "property_tax": 1100,
+    "insurance_annual": 200,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "reel-foncier",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 180000,
+      "rate": 0.035,
+      "years": 20,
+      "insurance_rate": 0.003
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.monthly_loan_payment": {
+      "value": 1043.93,
+      "tolerance": 0.51
+    },
+    "summary.monthly_loan_insurance": {
+      "value": 45.0,
+      "tolerance": 0.51
+    },
+    "years[0].loan_interest": {
+      "value": 6199.13,
+      "tolerance": 1.0
+    },
+    "summary.taxable_income_year1": {
+      "value": 2100.87,
+      "tolerance": 1.0
+    },
+    "summary.total_tax_year1": {
+      "value": 991.61,
+      "tolerance": 1.0
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": -479.9,
+      "tolerance": 1.0
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "int[ée]r[êe]ts?"
+  ],
+  "hand_computation": "payment 180 000 x (0.035/12) / (1 - (1 + 0.035/12)^-240) = 1 043.93; insurance 180 000 x 0.003 / 12 = 45; interest year 1 6 199.13; taxable 10 800 - 2 500 - 6 199.13 = 2 100.87; tax 47.2 % = 991.61; monthly (10 800 - 2 500 - 12 527.16 - 540 - 991.61) / 12 = -479.90.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

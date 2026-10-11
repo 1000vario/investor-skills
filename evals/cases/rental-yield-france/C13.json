@@ -1,0 +1,73 @@
+{
+  "id": "C13",
+  "skill": "rental-yield-france",
+  "title": "LMNP reel with a loan, interest eats the cap",
+  "question": "Meuble 180 000 EUR, frais 14 000 EUR, loyer 750 EUR hors charges, charges 1 000 EUR, taxe fonciere 900 EUR, tranche 30 %, LMNP au reel, pret 170 000 EUR a 4 % sur 25 ans, assurance 0,25 %. Impot et cash flow ?",
+  "inputs": {
+    "price": 180000,
+    "fees": 14000,
+    "works": 0,
+    "rent_monthly": 750,
+    "charges_annual": 1000,
+    "property_tax": 900,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "lmnp-reel",
+    "tmi": 0.3,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 170000,
+      "rate": 0.04,
+      "years": 25,
+      "insurance_rate": 0.0025
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.monthly_loan_payment": {
+      "value": 897.32,
+      "tolerance": 0.51
+    },
+    "years[0].loan_interest": {
+      "value": 6726.44,
+      "tolerance": 1.0
+    },
+    "years[0].depreciation_used": {
+      "value": 373.56,
+      "tolerance": 1.0
+    },
+    "years[0].depreciation_carried": {
+      "value": 5123.11,
+      "tolerance": 1.0
+    },
+    "summary.total_tax_year1": {
+      "value": 0.0,
+      "tolerance": 0.51
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": -341.07,
+      "tolerance": 1.0
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "39 ?C|report|carried"
+  ],
+  "hand_computation": "payment 897.32; interest year 1 6 726.44; cap 9 000 - 1 900 - 6 726.44 = 373.56; depreciation 194 000 x 0.85 / 30 = 5 496.67, used 373.56, carried 5 123.11; tax 0; monthly (9 000 - 1 900 - 10 767.84 - 425) / 12 = -341.07.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

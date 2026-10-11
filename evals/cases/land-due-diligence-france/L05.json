@@ -1,0 +1,50 @@
+{
+  "id": "L05",
+  "skill": "land-due-diligence-france",
+  "title": "Dijon, natural zone N, underground cavity, parcel sold in 2022",
+  "question": "Fais la due diligence fonciere de la parcelle 21231000EP0310 a Dijon a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, sans prix demande, et chaque fait avec sa source et sa date de consultation.",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L05.json",
+    "asking_price": null,
+    "surface": null,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 1,
+      "orange": 1,
+      "info": 1
+    },
+    "flag_codes": [
+      "not_constructible",
+      "parcel_sold_before",
+      "underground_cavities_500m"
+    ],
+    "stats": {
+      "count": 5,
+      "median_eur_m2": 2500,
+      "mean_eur_m2": 2540,
+      "min_eur_m2": 2400,
+      "max_eur_m2": 2700
+    },
+    "gap_to_median_pct": null,
+    "red_flag_keywords": [
+      "naturelle|natural|zone N|constructible"
+    ],
+    "orange_flag_keywords": [
+      "cavit"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 212500/85=2500, 260000/100=2600, 288000/120=2400, 237500/95=2500, 162000/60=2700; sorted 2400 2500 2500 2600 2700; median 2500; mean 12700/5=2540; parcel sold 2022-06-10 for 240000",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

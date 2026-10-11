@@ -1,0 +1,46 @@
+{
+  "id": "L02",
+  "skill": "land-due-diligence-france",
+  "title": "Nantes, asking price 22 % above the median",
+  "question": "Fais la due diligence fonciere de la parcelle 44109000CD0118 a Nantes a partir de la reponse foncier-mcp jointe (summarize_parcel, rayon 500 m). Drapeaux rouges d'abord, puis le prix median au m2 des ventes comparables de logements, l'ecart entre le prix demande de 350000 EUR pour 70 m2 et cette mediane, et chaque fait avec sa source et sa date de consultation. Le prix demande est-il dans le marche ?",
+  "inputs": {
+    "fixture": "skills/land-due-diligence-france/tests/fixtures/L02.json",
+    "asking_price": 350000,
+    "surface": 70,
+    "property_type": null
+  },
+  "expected": {
+    "counts": {
+      "red": 0,
+      "orange": 1,
+      "info": 0
+    },
+    "flag_codes": [
+      "asking_above_median"
+    ],
+    "stats": {
+      "count": 4,
+      "median_eur_m2": 4100,
+      "mean_eur_m2": 4050,
+      "min_eur_m2": 3800,
+      "max_eur_m2": 4200
+    },
+    "gap_to_median_pct": 21.95,
+    "red_flag_keywords": [],
+    "orange_flag_keywords": [
+      "prix|price|m[ée]dian"
+    ]
+  },
+  "tolerance": {
+    "eur_m2": 0.51,
+    "pct_points": 0.051
+  },
+  "must_mention": [
+    "dvf_geo|DVF|valeurs fonci",
+    "apicarto_gpu|GPU|urbanisme|planning",
+    "2026-10-11|11 octobre 2026|11/10/2026"
+  ],
+  "hand_computation": "EUR/m2: 240000/60=4000, 315000/75=4200, 342000/90=3800, 231000/55=4200; sorted 3800 4000 4200 4200; median (4000+4200)/2=4100; mean 16200/4=4050; asking 350000/70=5000 -> gap 5000/4100-1=+21.95 %",
+  "truth_date": "2026-10-11",
+  "truth_source": "Synthetic fixture written on 2026-10-11 following the foncier-mcp envelope contract (models.py and tools.py read the same day). EUR/m2 of each sale, sorted list, median, mean and gap computed by hand, see hand_computation. No real property is described."
+}

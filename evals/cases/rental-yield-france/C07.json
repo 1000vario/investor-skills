@@ -1,0 +1,74 @@
+{
+  "id": "C07",
+  "skill": "rental-yield-france",
+  "title": "Unclassified tourist rental, 30 % abatement",
+  "question": "Meuble de tourisme non classe, 100 000 EUR, frais 8 000 EUR, 1 000 EUR par mois de loyers en moyenne, charges 1 000 EUR, taxe fonciere 500 EUR, tranche 11 %, micro-BIC 2026. Quel abattement et quel rendement net d'impot ?",
+  "inputs": {
+    "price": 100000,
+    "fees": 8000,
+    "works": 0,
+    "rent_monthly": 1000,
+    "charges_annual": 1000,
+    "property_tax": 500,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "lmnp-micro-bic",
+    "tmi": 0.11,
+    "income_year": 2026,
+    "tourism_unclassified": true,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.gross_yield_pct": {
+      "value": 12.0,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 9.7222,
+      "tolerance": 0.011
+    },
+    "summary.taxable_income_year1": {
+      "value": 8400.0,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 2368.8,
+      "tolerance": 0.51
+    },
+    "summary.net_after_tax_yield_year1_pct": {
+      "value": 7.5289,
+      "tolerance": 0.011
+    },
+    "summary.monthly_cash_flow_after_tax_year1": {
+      "value": 677.6,
+      "tolerance": 0.51
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": null,
+  "must_mention": [
+    "30 ?%",
+    "15 ?000"
+  ],
+  "hand_computation": "rent 12 000 under 15 000; 30 % abatement (R5, unclassified): taxable 8 400; tax 28.2 % = 2 368.80; net 10 500 / 108 000 = 9.7222 %; after tax 8 131.20 / 108 000 = 7.5289 %.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}

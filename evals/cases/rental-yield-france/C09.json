@@ -1,0 +1,70 @@
+{
+  "id": "C09",
+  "skill": "rental-yield-france",
+  "title": "Micro-BIC 2026 at 80 000, under 83 600, LMNP ceiling warning",
+  "question": "Meme immeuble meuble, 900 000 EUR, frais 60 000 EUR, 6 666,67 EUR de loyers par mois, charges 6 000 EUR, taxe fonciere 5 000 EUR, tranche 41 %, micro-BIC, mais revenus 2026. Et le statut LMNP tient-il ?",
+  "inputs": {
+    "price": 900000,
+    "fees": 60000,
+    "works": 0,
+    "rent_monthly": 6666.67,
+    "charges_annual": 6000,
+    "property_tax": 5000,
+    "insurance_annual": 0,
+    "management_rate": 0.0,
+    "vacancy_months": 0,
+    "regime": "lmnp-micro-bic",
+    "tmi": 0.41,
+    "income_year": 2026,
+    "tourism_unclassified": false,
+    "works_deductible": true,
+    "energy_renovation": false,
+    "rent_growth": 0.0,
+    "charges_growth": 0.0,
+    "horizon_years": 10,
+    "loan": {
+      "amount": 0,
+      "rate": 0.0,
+      "years": 0,
+      "insurance_rate": 0.0
+    },
+    "lmnp": {
+      "land_share": 0.15,
+      "building_years": 30,
+      "furniture_value": 0.0,
+      "furniture_years": 7,
+      "works_years": 15
+    }
+  },
+  "expected": {
+    "summary.gross_yield_pct": {
+      "value": 8.8889,
+      "tolerance": 0.011
+    },
+    "summary.net_yield_pct": {
+      "value": 7.1875,
+      "tolerance": 0.011
+    },
+    "summary.taxable_income_year1": {
+      "value": 40000.02,
+      "tolerance": 0.51
+    },
+    "summary.total_tax_year1": {
+      "value": 23280.01,
+      "tolerance": 0.51
+    },
+    "summary.net_after_tax_yield_year1_pct": {
+      "value": 4.7625,
+      "tolerance": 0.011
+    }
+  },
+  "expect_refusal": null,
+  "expect_warning": "R6",
+  "must_mention": [
+    "83 ?600",
+    "23 ?000"
+  ],
+  "hand_computation": "80 000.04 under 83 600 (2026): micro-BIC open; taxable 40 000.02; tax 58.2 % = 23 280.01; receipts above 23 000 (R6): LMNP status depends on other income; net 69 000.04 / 960 000 = 7.1875 %; after tax 45 720.03 / 960 000 = 4.7625 %.",
+  "truth_date": "2026-10-11",
+  "truth_source": "Hand computation on 2026-10-11 from rules R1 to R9 of skills/rental-yield-france/references/regles-fiscales.md (service-public.fr F1991, F32744, F1419 checked 2026-04-15; CGI art. 31, 32, 39 C, 50-0, 155, 156; BOFiP BOI-BIC-CHAMP-40-20 and BOI-BIC-AMT-20-40-10-20)."
+}
