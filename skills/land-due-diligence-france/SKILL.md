@@ -24,8 +24,9 @@ Do not use for a valuation, a legal opinion, or a property outside France.
 
 - The foncier-mcp MCP server, https://github.com/1000vario/foncier-mcp, with its tools
   `summarize_parcel`, `get_parcel_sales`, `get_zoning`, `get_energy_diagnostics`, `get_risks`.
-  As of 2026-10-11 the server is being published; without it, the skill runs on a saved
-  envelope only (see `tests/fixtures/` for the shape).
+  Replayed on 2026-10-14 against its public demo endpoint (`tools/replay_demo.py` at the
+  repository root). Without the server, the skill runs on a saved envelope (see
+  `tests/fixtures/` for the shape).
 - Python 3.11 or later, standard library only.
 
 ## Steps

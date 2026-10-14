@@ -49,8 +49,12 @@ public APIs, so use its `--recorded` mode when the sandbox is offline.
 `.agents/skills/` of one repository. Codex reads `SKILL.md` and runs the script from there.
 
 **`land-due-diligence-france`** needs the foncier-mcp server configured in the same client; its
-`SKILL.md` says which tools it calls. As of 2026-10-11 the server is being published; until then
-the skill runs on a saved envelope (see `tests/fixtures/`).
+`SKILL.md` says which tools it calls. The server is public at
+https://github.com/1000vario/foncier-mcp and exposes a demo endpoint without key (15 nearby
+sales at most, 10 calls per hour per IP). The skill was replayed against it on 2026-10-14 with
+`tools/replay_demo.py`: live envelopes follow the contract the tests use, including the DVF
+coverage hole of Alsace-Moselle. Without a server, the skill runs on a saved envelope (see
+`tests/fixtures/`).
 
 ## Run a script by hand
 
@@ -70,8 +74,9 @@ the same disclaimer as the skill.
 pip install ruff pytest
 ruff check . && ruff format --check .
 python tools/check_skills.py       # frontmatter, size limits, scripts, tests, no em dash or en dash
-python -m pytest -q                # 54 tests
+python -m pytest -q                # 61 tests
 python evals/run.py --dry-run      # 45 cases, script arm, no model, no network
+python tools/replay_demo.py        # live replay against the public foncier-mcp demo, network, counts only
 ```
 
 CI runs the same five commands on Python 3.11 and 3.13 on every push.
